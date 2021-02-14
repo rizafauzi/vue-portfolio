@@ -1,0 +1,23 @@
+[
+  {
+    "name": "projects",
+    "path": "/projects",
+    "component": "/Users/macbook/Documents/WORK/PORTFOLIO/riza-portfolio/pages/projects.vue",
+    "chunkName": "pages/projects",
+    "_name": "_c0c1c1c8"
+  },
+  {
+    "name": "project-slug",
+    "path": "/project/:slug?",
+    "component": "/Users/macbook/Documents/WORK/PORTFOLIO/riza-portfolio/pages/project/_slug.vue",
+    "chunkName": "pages/project/_slug",
+    "_name": "_26a18a3c"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/macbook/Documents/WORK/PORTFOLIO/riza-portfolio/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_45f1ada0"
+  }
+]

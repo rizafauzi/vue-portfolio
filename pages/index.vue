@@ -28,6 +28,7 @@
 		</section>
 		<section>
 			<Title :color="'#BEFFBD'" :title="educationTitle"/>
+			<EducationSection :data="educations"/>
 		</section>
 	</div>
 </template>
@@ -40,7 +41,8 @@ import ProfileCard from '../components/ProfileCard.vue'
 import ProjectCard from '../components/ProjectCard.vue'
 import ExperienceCard from '../components/ExperienceCard.vue'
 import ExperienceSection from '../components/ExperienceSection.vue'
-import { projects, experience } from '../CONST.js'
+import EducationSection from '../components/EducationSection.vue'
+import { projects, experience, education } from '../CONST.js'
 export default {
   components: {
 		Title,
@@ -48,10 +50,12 @@ export default {
 		ProfileCard,
 		ProjectCard,
 		ExperienceCard,
+		EducationSection,
 		ExperienceSection
   },
   data() {
 		return {
+			educations: education,
 			projects: projects,
 			experience: experience,
 			title: 'Sampurasun! 안녕하세요! Hello! もしもし! Sampurasun! 안녕하세요! Hello! もしもし! Sampurasun! 안녕하세요! Hello! もしもし!',
@@ -88,7 +92,7 @@ export default {
 }
 
 .container {
-	width: 100%;
+	width: 75%;
 	position: relative;
 }
 

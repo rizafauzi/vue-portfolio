@@ -52,10 +52,12 @@ export default {
   position: relative;
   align-items: center;
 	flex-direction: column;
+	@media (max-width: 768px) {
+		height: 80px;
+	}
 	.title {
 		padding: 0px;
 		display: flex;
-		font-size: 72px;
 		position: absolute;
 		white-space: nowrap;
 		flex-direction: row;
@@ -70,6 +72,9 @@ export default {
 	margin-left: (calc(var(--scroll) * -600));
 	.title-font {
 		font-family: 'Altero Outline';
+		@media (max-width: 768px) {
+      font-size: 36px;
+    }
 	}
 }
 
@@ -78,6 +83,9 @@ export default {
 	right: (calc(var(--scroll) * -600));
 	.title-font {
 		font-family: 'Altero Regular';
+		@media (max-width: 768px) {
+      font-size: 36px;
+    }
 	}
 }
 

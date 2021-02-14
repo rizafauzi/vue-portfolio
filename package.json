@@ -25,14 +25,15 @@
 		"express": "^4.16.3",
 		"mobile-orientation": "^2.1.2",
 		"nuxt": "^2.0.0",
-		"tailwindcss": "^1.6.2",
 		"vue": "^2.6.12",
 		"vue-template-compiler": "^2.6.12",
 		"vuelidate": "^0.7.5",
 		"vuex": "^3.5.1"
 	},
 	"devDependencies": {
-		"@nuxtjs/tailwindcss": "^3.0.0",
+		"@nuxtjs/tailwindcss": "^3.4.2",
+		"@tailwindcss/postcss7-compat": "^2.0.3",
+		"autoprefixer": "^9.8.6",
 		"babel-eslint": "^8.2.1",
 		"eslint": "^5.0.1",
 		"eslint-loader": "^2.0.0",
@@ -41,7 +42,9 @@
 		"node-sass": "^4.14.1",
 		"nodemon": "^1.11.0",
 		"nuxt-purgecss": "^1.0.0",
+		"postcss": "^7.0.35",
 		"sass-loader": "^9.0.3",
+		"tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3",
 		"vue-svg-loader": "^0.16.0"
 	}
 }

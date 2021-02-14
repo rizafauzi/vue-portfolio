@@ -2,16 +2,20 @@
 	<div class="project-card">	
 		<img 
 			class="project-image"
-			src="~/static/img/profile.jpg" 
+			:src="require(`@/assets/projects/${data.image}_mobile.jpg`)" 
 		/>
 		<div class="project-content">
 			<div>
 				<h1>{{data.title}}</h1>
 				<h2 class="spacer">{{data.year}}</h2>
 			</div>
-			<h2>{{data.description}}</h2>
-			<div class="button">
+			<h2>{{data.summary}}</h2>
+			<div class="button" @click="navigate(data.slug)">
 				<h3>See Detail</h3>
+				<img 
+					class="arrow"
+					src="~/static/icon/arrow-line.png" 
+				/>
 			</div>
 		</div>
 	</div>
@@ -24,6 +28,11 @@ export default {
 		// 	return {
 		// 	}
 		// }
+	},
+	methods: {
+		navigate(url) {
+			this.$router.push(`/project/${url}`)
+		}
 	},
 	props: {
     data: {
@@ -60,15 +69,19 @@ export default {
 		flex-direction: column;
 		justify-content: space-between;
 		.button {
-			width: 40%;
+			width: 35%;
 			padding: 4%;
 			border: none;
 			display: flex;
 			margin-top: 2%;
 			border-radius: 10px;
-			justify-content: flex-start;
+			justify-content: space-between;
 			background: rgba(255, 255, 255, 0.2);
 			border: solid 1px rgba(255, 255, 255, 0.4);
+			.arrow {
+				width: 25px;
+				margin-left: 20px;
+			}
 		}
 	}
 }

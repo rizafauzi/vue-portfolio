@@ -1,6 +1,6 @@
 <template>
 	<div class="container">
-		<div class="card">
+		<div class="card" >
 			<img 
 				class="emoji"
 				src="~/static/img/memoji_celebrate.png" 
@@ -8,35 +8,44 @@
 			<!-- <video class="memoji" width="400" autoplay :src="require('~/assets/video/memoji.mov')" loop /> -->
 			<h1>Hi, I'm Riza Fauzi</h1>
 			<h2>Software Engineer • UI Designer • Fulltime Learner</h2>
+			<div class="socal-media">
+				
+			</div>
 		</div>
 	</div>
 </template>
 
 <script>
+// @mouseover="mouseOver" 
+// 			@mouseleave="mouseLeave" 
+// 			v-bind:style="{ transform: `scale(${scale}) rotateX(${yAxis}deg) rotateY(${xAxis}deg)` }"
 export default {
-	data() {
-		return {
-			tracked: false,
-			xAxis: 0,
-			yAxis: 0
-		}
-	},
-	methods: {
-		mouseOver() {
-			this.tracked = true
-			if(process.browser) {
-				window.addEventListener('mousemove', e => {
-					if(this.tracked) {
-						this.xAxis = (window.innerWidth / 2 - e.pageX)
-						this.yAxis = (window.innerHeight / 2 - e.pageY)
-					}
-				})
-			}
-		},
-		mouseLeave() {
-			this.tracked = false
-		}
-	}
+	// data() {
+	// 	return {
+	// 		tracked: false,
+	// 		xAxis: 0,
+	// 		yAxis: 0,
+	// 		scale: 1
+	// 	}
+	// },
+	// methods: {
+	// 	mouseOver() {
+	// 		this.tracked = true
+	// 		if(process.browser && this.tracked) {
+	// 			this.scale = 1.2
+	// 			window.addEventListener('mousemove', e => {
+	// 				this.xAxis = -(window.innerWidth / 2 - e.pageX) / 15
+	// 				this.yAxis = (window.innerHeight / 2 - e.pageY) / 15
+	// 			})
+	// 		}
+	// 	},
+	// 	mouseLeave() {
+	// 		this.tracked = false
+	// 		this.xAxis = 0
+	// 		this.yAxis = 0
+	// 		this.scale = 1
+	// 	}
+	// }
 }
 </script>
 
@@ -53,7 +62,6 @@ export default {
 		width: 800px;
 		height: 50vh;
 		display: flex;
-		transform: rotateX(10deg) rotateY(10deg);
 		position: absolute;
 		align-items: center;
 		border-radius: 30px;

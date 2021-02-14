@@ -13,7 +13,7 @@
 							src="~/static/img/memoji_celebrate.png" 
 						/>
 					<div class="title">
-						<h1 class="spacer">{{`First of all, Glad to meet you!`}}</h1>
+						<h1>{{`First of all, Glad to meet you!`}}</h1>
 					</div>
 					<h2>{{`I’m experienced in designing and developing in Web and Mobile Apps with a passion for the Love of bringing delightful and human-centric experience to Life. I’m also Interested in front-end developing and everything related to visual, such as photography, web & graphic design.`}}</h2>
 				</div>
@@ -53,13 +53,19 @@ export default {
 		backdrop-filter: blur(40px);
 		background: rgba(0, 0, 0, 0.2);
 		border: solid 1px rgba(150, 150, 150, 0.5);
+		@media (max-width: 768px) {
+      flex-direction: column;
+    }
 		.profile-content {
 			width: 60%;
+			padding: 4%;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			padding: 4%;
 			flex-direction: column;
+			@media (max-width: 768px) {
+				width: 100%;
+			}
 			.title {
 				width: 100%;
 				display: flex;
@@ -78,6 +84,11 @@ export default {
 			object-fit: cover;
 			flex-direction: row;
 			justify-content: center;
+			@media (max-width: 768px) {
+				width: 100%;
+				height: 60%;
+				border-radius: 20px;
+			}
 		}
 	}
 	.background-card {
@@ -94,17 +105,18 @@ export default {
 	}
 }
 
-.spacer {
-	font-size: 28px;
-}
-
 .wrapper-card:hover .background-card {
 	width: 82%;
 	transform: skew(0, 10deg);
 	box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.3);
 }
 
+h1 {
+	font-size: 32px;
+}
+
 h2 {
+	font-size: 18px;
 	text-align: left;
 }
 

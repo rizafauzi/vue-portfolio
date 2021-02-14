@@ -19,12 +19,12 @@
           <div @click="toggleNetworkModal()" v-bind:id="'no'" class="modal-button">
             <h1 v-bind:id="'no'" >No</h1>
           </div>
-          <div 
-            v-bind:id="'yes'" 
-            class="modal-button" 
-            @click="$router.replace({ path: `/ideas-area/network-lounge` })"
-            >
-            <h1 >Yes</h1>
+					<div 
+						v-bind:id="'yes'" 
+						class="modal-button" 
+						@click="$router.replace({ path: `/ideas-area/network-lounge` })"
+					>
+						<h1>Yes</h1>
           </div>
         </div>
       </div>
@@ -49,9 +49,9 @@ export default {
 		
     isMobile() {
       if (process.browser) {
-          if (window.innerWidth <= 768) {
-              return true
-          }
+				if (window.innerWidth <= 768) {
+					return true
+				}
       }
     },
   },
