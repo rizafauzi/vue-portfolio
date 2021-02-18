@@ -18,7 +18,7 @@ module.exports = {
 		]
 	},
 
-	// loading: { color: '#fff' },
+	loading: { color: '#fff' },
 	css: [
 		'~/assets/font.css', 
 		'~/assets/main.css', 
