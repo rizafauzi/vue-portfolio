@@ -25,7 +25,7 @@ module.exports = {
 		'~/assets/scss/tailwind.scss',
 		// 'swiper/css/swiper.css'
 	],
-  purgeCSS: { mode: 'postcss' },
+  // purgeCSS: { mode: 'postcss' },
 	plugins: [
 		// { src: '~/plugins/cometchat', ssr: false },
 		// { src: '~/plugins/vue-carousel', ssr: false },
@@ -96,19 +96,7 @@ module.exports = {
         }
       })
     },
-
-		extend(config, ctx) {
-      config.module.rules.push({
-				test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-				loader: 'url-loader',
-				query: {
-					limit: 1000, // 1kB
-					name: 'fonts/[name].[hash:7].[ext]'
-				}
-			})
-    },
 		
-		extractCSS: true,
     postcss: {
       plugins: {
         tailwindcss: path.resolve(__dirname, './tailwind.config.js')
