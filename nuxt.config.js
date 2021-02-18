@@ -3,6 +3,8 @@ const path = require('path')
 
 module.exports = {
 	mode: 'spa',
+	ssr: false,
+	target: 'static',
 	head: {
 		title: 'Riza Fauzi',
 		meta: [
