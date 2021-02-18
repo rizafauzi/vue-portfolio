@@ -30,6 +30,15 @@ export default {
 			}
 		}
 	},
+	methods: {
+		isMobile() {
+			if (process.browser) {
+				if (window.innerWidth <= 768) {
+					return true
+				}
+			}
+		}
+	},
 	props: {
 		data: {
 			type: Object
@@ -40,6 +49,67 @@ export default {
 
 <style lang="scss" scoped>
 
+
+.mobile-background-card {
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	border-radius: 0px 20px 20px 20px;
+	transform-origin: top left;
+	background: var(--gradient);
+	transition: all 0.4s cubic-bezier(0.62, 0.01, 0.33, 0.97);
+}
+
+.mobile-card {
+	width: 100%;
+	display: flex;
+	padding: 10px;
+	flex-direction: column;
+	.univ-logo {
+		top: 10%;
+		left: 0;
+		width: 200px;
+		display: flex;
+		margin-right: 10px;
+		align-items: center;
+		justify-content: center;
+		z-index: 1000;
+		.logo-univ {
+			width: 80px;
+			margin-right: 10px;
+			background: #845FC0;
+			object-fit: contain;
+		}
+	}
+	.univ-desc {
+		top: 10%;
+		right: 0;
+		width: 100%;
+		display: flex;
+		padding: 15px;
+		flex-direction: column;
+		backdrop-filter: blur(40px);
+		background: rgba(0, 0, 0, 0.2);
+		border-radius: 0px 15px 15px 15px;
+		border: solid 1px rgba(150, 150, 150, 0.5);
+		.buttons {
+			border: none;
+			width: 170px;
+			padding: 10px;
+			display: flex;
+			margin-top: 10px;
+			border-radius: 10px;
+			align-items: center;
+			justify-content: center;
+			transition: all 0.2s ease-in-out;
+			background: rgba(255, 255, 255, 0.2);
+			border: solid 1px rgba(255, 255, 255, 0.4);
+		}
+	}
+}
+
 .container-card {
 	width: 75%;
 	display: flex;
@@ -48,6 +118,10 @@ export default {
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
+	@media (max-width: 768px) {
+		width: 90%;
+		margin-bottom: 8%;
+	}
 	.background-card {
 		top: 0%;
 		left: 5%;
@@ -58,12 +132,22 @@ export default {
 		transform-origin: top left;
 		background: var(--gradient);
 		transition: all 0.4s cubic-bezier(0.62, 0.01, 0.33, 0.97);
+		@media (max-width: 768px) {
+			left: 0%;
+			width: 100%;
+			height: 100%;
+			border-radius: 0px 15px 15px 15px;
+		}
 	}
 	.wrapper-card {
 		width: 100%;
 		display: flex;
 		padding: 20px;
 		flex-direction: row;
+		@media (max-width: 768px) {
+			padding: 15px;
+			flex-direction: column;
+		}
 		.univ-logo {
 			top: 10%;
 			left: 0;
@@ -77,9 +161,21 @@ export default {
 			background: rgba(0, 0, 0, 0.2);
 			border-radius: 0px 20px 20px 20px;
 			border: solid 1px rgba(150, 150, 150, 0.5);
+			@media (max-width: 768px) {
+				height: auto;
+				width: 100%;
+				background: transparent;
+				backdrop-filter: blur(0px);
+				border: solid 0px transparent;
+			}
 			.logo-univ {
 				padding: 15%;
 				object-fit: contain;
+				@media (max-width: 768px) {
+					width: 100px;
+					padding: 0%;
+					margin-right: 15px;
+				}
 			}
 		}
 		.univ-desc {
@@ -88,11 +184,16 @@ export default {
 			width: 78%;
 			display: flex;
 			padding: 25px;
-			border-radius: 20px;
+			border-radius: 10px;
 			flex-direction: column;
 			backdrop-filter: blur(40px);
 			background: rgba(0, 0, 0, 0.2);
 			border: solid 1px rgba(150, 150, 150, 0.5);
+			@media (max-width: 768px) {
+				margin-top: 15px;
+				width: 100%;
+				padding: 15px;
+			}
 			.spacer {
 				width: 100%;
 				height: 1px;
@@ -126,20 +227,28 @@ h1 {
 	text-align: left;
 	font-weight: 600;
 	font-size: 32px;
+	@media (max-width: 768px) {
+		font-size: 24px;
+	}
 }
 
 h2 {
 	text-align: left;
+	@media (max-width: 768px) {
+		font-size: 16px;
+	}
 }
 
 h3 {
-	line-height: 0%;
+	line-height: 100%;
 	font-size: 18px;
 	color: #DDDDDD;
 	text-align: center;
 	letter-spacing: 1px;
-	background: #845FC0;
 	font-family: 'SF Pro Display Regular';
+	@media (max-width: 768px) {
+		font-size: 14px;
+	}
 }
 
 .button:hover {

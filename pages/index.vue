@@ -94,6 +94,9 @@ export default {
 .container {
 	width: 75%;
 	position: relative;
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 }
 
 .project-wrapper {

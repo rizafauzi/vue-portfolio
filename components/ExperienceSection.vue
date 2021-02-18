@@ -1,14 +1,21 @@
 <template>
 	<div class="container">
-		<div class="content">
-			<div class="odd-experience" v-for="(state, index) in oddData" :key="index" >
-				<ExperienceCard :odd="true" :data="state" />
+		<div v-if="!isMobile()" class="web-content">
+			<div class="content">
+				<div class="odd-experience" v-for="(state, index) in oddData" :key="index" >
+					<ExperienceCard :odd="true" :data="state" />
+				</div>
+			</div>
+			<div class="spacer" />
+			<div class="content" id="even">
+				<div class="even-experience" v-for="(state, index) in evenData" :key="index" >
+					<ExperienceCard :odd="false" :data="state" />
+				</div>
 			</div>
 		</div>
-		<div class="spacer" />
-		<div class="content" id="even">
-			<div class="even-experience" v-for="(state, index) in evenData" :key="index" >
-				<ExperienceCard :odd="false" :data="state" />
+		<div v-else class="mobile-content">
+			<div class="all-experience" v-for="(state, index) in data" :key="index" >
+				<MobileExperienceCard :odd="false" :data="state" />
 			</div>
 		</div>
 	</div>
@@ -16,14 +23,25 @@
 
 <script>
 import ExperienceCard from './ExperienceCard.vue'
+import MobileExperienceCard from './MobileExperienceCard.vue'
 export default {
 	components: {
-		ExperienceCard
+		ExperienceCard,
+		MobileExperienceCard
 	},
 	data() {
 		return {
 			oddData: [],
 			evenData: []
+		}
+	},
+	methods: {
+		isMobile() {
+			if (process.browser) {
+				if (window.innerWidth <= 768) {
+					return true
+				}
+			}
 		}
 	},
 	props: {
@@ -41,24 +59,38 @@ export default {
 <style lang="scss" scoped>
 .container {
 	width: 100%;
-	display: flex;
-	flex-direction: row;
 	position: relative;
 	padding: 10vh 0vh;
-	.content {
-		width: 50%;
-		.odd-experience {
-			width: 100%;
-			display: flex;
-			padding-right: 10%;
-			align-items: flex-end;
-			flex-direction: column;
-			justify-content: center;
+	.web-content {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		.content {
+			width: 50%;
+			.odd-experience {
+				width: 100%;
+				display: flex;
+				padding-right: 10%;
+				align-items: flex-end;
+				flex-direction: column;
+				justify-content: center;
+			}
+			.even-experience {
+				width: 100%;
+				display: flex;
+				padding-left: 10%;
+				align-items: flex-start;
+				flex-direction: column;
+				justify-content: center;
+			}
 		}
-		.even-experience {
+	}
+	.mobile-content {
+		width: 100%;
+		.all-experience {
 			width: 100%;
 			display: flex;
-			padding-left: 10%;
+			padding-left: 5%;
 			align-items: flex-start;
 			flex-direction: column;
 			justify-content: center;

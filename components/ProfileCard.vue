@@ -9,6 +9,7 @@
 				/>
 				<div class="profile-content">
 					<img 
+							v-if="!isMobile"
 							class="emoji"
 							src="~/static/img/memoji_celebrate.png" 
 						/>
@@ -24,7 +25,15 @@
 
 <script>
 export default {
-
+	methods: {
+		isMobile() {
+      if (process.browser) {
+				if (window.innerWidth <= 768) {
+					return true
+				}
+      }
+    },
+	}
 }
 </script>
 
@@ -37,7 +46,7 @@ export default {
 .wrapper-card {
 	width: 75%;
 	margin-left: 12.5%;
-	height: 60vh;
+	min-height: 60vh;
 	padding: 20px;
 	display: flex;
 	position: relative;
@@ -45,7 +54,7 @@ export default {
 		top: 5vh;
 		left: 0%;
 		width: 100%;
-		height: 60vh;
+		min-height: 60vh;
 		padding: 20px;
 		display: flex;
 		position: absolute;
@@ -54,6 +63,8 @@ export default {
 		background: rgba(0, 0, 0, 0.2);
 		border: solid 1px rgba(150, 150, 150, 0.5);
 		@media (max-width: 768px) {
+			padding: 15px;
+			border-radius: 20px;
       flex-direction: column;
     }
 		.profile-content {
@@ -69,6 +80,7 @@ export default {
 			.title {
 				width: 100%;
 				display: flex;
+				
 				align-items: flex-start;
 			}
 			.emoji {
@@ -86,8 +98,8 @@ export default {
 			justify-content: center;
 			@media (max-width: 768px) {
 				width: 100%;
-				height: 60%;
-				border-radius: 20px;
+				height: 30vh;
+				border-radius: 10px;
 			}
 		}
 	}
@@ -95,13 +107,18 @@ export default {
 		top: 5vh;
 		left: 0%;
 		width: 92%;
-		height: 60vh;
+		min-height: 60vh;
 		position: absolute;
 		border-radius: 30px;
 		transform: skew(0, 5deg);
 		transform-origin: top left;
 		transition: all 0.4s cubic-bezier(0.62, 0.01, 0.33, 0.97);
 		background: linear-gradient(to bottom, #FF9CE9, #845FC0);
+		@media (max-width: 768px) {
+			width: 85%;
+			border-radius: 20px;
+			transform: skew(0, 10deg);
+		}
 	}
 }
 
@@ -113,11 +130,17 @@ export default {
 
 h1 {
 	font-size: 32px;
+	@media (max-width: 768px) {
+		font-size: 16px;
+	}
 }
 
 h2 {
 	font-size: 18px;
 	text-align: left;
+	@media (max-width: 768px) {
+		font-size: 10px;
+	}
 }
 
 </style>

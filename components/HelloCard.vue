@@ -59,8 +59,9 @@ export default {
 	justify-content: center;
 	.card {
 		top: 10vh;
-		width: 800px;
+		width: 70%;
 		height: 50vh;
+		padding: 20px;
 		display: flex;
 		position: absolute;
 		align-items: center;
@@ -92,10 +93,13 @@ export default {
 
 h1 {
 	color: #FFFFFF;
-	font-size: 64px;
+	font-size: 48px;
   font-style: normal;
   text-align: center;
   font-family: 'SF Pro Display Bold';
+	@media (max-width: 768px) {
+		font-size: 28px;
+	}
 }
 
 h2 {
@@ -104,6 +108,9 @@ h2 {
   font-style: normal;
   text-align: center;
   font-family: 'SF Pro Display Medium';
+	@media (max-width: 768px) {
+		font-size: 14px;
+	}
 }
 
 </style>
