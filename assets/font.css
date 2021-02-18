@@ -11,41 +11,41 @@
 @font-face {
 	font-family: 'Narasi Sans Medium';
 	font-style: normal;
-	src: url('~static/fonts/NarasiSans-Medium.otf');
+	src: url('~assets/fonts/NarasiSans-Medium.otf');
 }
 
 @font-face {
 	font-family: 'SF Pro Display Bold';
 	font-style: normal;
-	src: url('~static/fonts/SF-Pro-Display-Bold.otf');
+	src: url('~assets/fonts/SF-Pro-Display-Bold.otf');
 }
 
 @font-face {
 	font-family: 'SF Pro Display SemiBold';
 	font-style: normal;
-	src: url('~static/fonts/SF-Pro-Display-SemiBold.otf');
+	src: url('~assets/fonts/SF-Pro-Display-SemiBold.otf');
 }
 
 @font-face {
 	font-family: 'SF Pro Display Medium';
 	font-style: normal;
-	src: url('~static/fonts/SF-Pro-Display-Medium.otf');
+	src: url('~assets/fonts/SF-Pro-Display-Medium.otf');
 }
 
 @font-face {
 	font-family: 'SF Pro Display Regular';
 	font-style: normal;
-	src: url('~static/fonts/SF-Pro-Display-Regular.otf');
+	src: url('~assets/fonts/SF-Pro-Display-Regular.otf');
 }
 
 @font-face {
 	font-family: 'Altero Regular';
 	font-style: normal;
-	src: url('~static/fonts/Altero-Regular.otf');
+	src: url('~assets/fonts/Altero-Regular.otf');
 }
 
 @font-face {
 	font-family: 'Altero Outline';
 	font-style: normal;
-	src: url('~static/fonts/Altero-Outline.otf');
+	src: url('~assets/fonts/Altero-Outline.otf');
 }
