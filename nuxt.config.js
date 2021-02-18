@@ -96,6 +96,17 @@ module.exports = {
         }
       })
     },
+
+		extend(config, ctx) {
+      config.module.rules.push({
+				test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+				loader: 'url-loader',
+				query: {
+					limit: 1000, // 1kB
+					name: 'fonts/[name].[hash:7].[ext]'
+				}
+			})
+    },
 		
 		extractCSS: true,
     postcss: {
