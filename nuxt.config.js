@@ -57,6 +57,10 @@ module.exports = {
 	markdownit: { injected: true },
 	
 	build: {
+		extractCSS: {
+      ignoreOrder: true
+    },
+
 		extend(config, ctx) {
 			if (ctx.isDev && ctx.isClient) {
 				config.module.rules.push({
