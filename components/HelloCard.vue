@@ -96,9 +96,10 @@ h1 {
 	font-size: 48px;
   font-style: normal;
   text-align: center;
-  font-family: 'SF Pro Display Bold';
+	font-family: 'Poppins';
+	font-weight: 600;
 	@media (max-width: 768px) {
-		font-size: 28px;
+		font-size: 22px;
 	}
 }
 
@@ -107,9 +108,10 @@ h2 {
 	font-size: 22px;
   font-style: normal;
   text-align: center;
-  font-family: 'SF Pro Display Medium';
+	font-family: 'Poppins';
+	font-weight: 400;
 	@media (max-width: 768px) {
-		font-size: 14px;
+		font-size: 12px;
 	}
 }
 

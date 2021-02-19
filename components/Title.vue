@@ -1,7 +1,7 @@
 <template>
 	<div class="title-container">
 		<div class="title top">
-			<h1 class="title-font" v-bind:style="{ color: color }">
+			<h1 class="title-font" v-bind:style="{ '-webkit-text-stroke-color': color }">
 				{{title}}
 			</h1>
 		</div>
@@ -71,7 +71,10 @@ export default {
 	left: 0;
 	margin-left: (calc(var(--scroll) * -600));
 	.title-font {
-		font-family: 'Altero Outline';
+		letter-spacing: 2px;
+		font-family: 'Bebas Neue';
+		-webkit-text-fill-color: transparent;
+		-webkit-text-stroke-width: 0.5px;
 		@media (max-width: 768px) {
       font-size: 36px;
     }
@@ -82,7 +85,8 @@ export default {
 	bottom: 0;
 	right: (calc(var(--scroll) * -600));
 	.title-font {
-		font-family: 'Altero Regular';
+		letter-spacing: 2px;
+		font-family: 'Bebas Neue';
 		@media (max-width: 768px) {
       font-size: 36px;
     }

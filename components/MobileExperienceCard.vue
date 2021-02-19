@@ -163,19 +163,20 @@ export default {
 
 h1 {
 	color: white;
-	font-size: 20px;
+	font-size: 16px;
 	line-height: 100%;
 	text-align: left;
 }
 
 h2 {
 	line-height: 100%;
-	font-size: 14px;
+	font-size: 12px;
 	margin-top: 5px;
 	color: #DDDDDD;
 	text-align: center;
 	letter-spacing: 1px;
-	font-family: 'SF Pro Display Regular';
+	font-family: 'Poppins';
+	font-weight: 400;
 }
 
 h3 {
@@ -184,7 +185,8 @@ h3 {
 	color: #DDDDDD;
 	text-align: center;
 	letter-spacing: 1px;
-	font-family: 'SF Pro Display Regular';
+	font-family: 'Poppins';
+	font-weight: 400;
 }
 
 .time-text {

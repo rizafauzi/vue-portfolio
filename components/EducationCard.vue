@@ -228,14 +228,14 @@ h1 {
 	font-weight: 600;
 	font-size: 32px;
 	@media (max-width: 768px) {
-		font-size: 24px;
+		font-size: 16px;
 	}
 }
 
 h2 {
 	text-align: left;
 	@media (max-width: 768px) {
-		font-size: 16px;
+		font-size: 12px;
 	}
 }
 
@@ -245,7 +245,8 @@ h3 {
 	color: #DDDDDD;
 	text-align: center;
 	letter-spacing: 1px;
-	font-family: 'SF Pro Display Regular';
+	font-family: 'Poppins';
+	font-weight: 400;
 	@media (max-width: 768px) {
 		font-size: 14px;
 	}

@@ -184,7 +184,8 @@ h3 {
 	color: #FFFFFF;
 	font-size: 20px;
   text-align: left;
-  font-family: 'SF Pro Display Bold';
+	font-family: 'Poppins';
+	font-weight: 600;
 	@media (max-width: 768px) {
 		font-size: 12px;
 	}

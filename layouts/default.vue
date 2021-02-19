@@ -57,7 +57,8 @@ h1 {
 	font-size: 64px;
   font-style: normal;
   text-align: center;
-  font-family: 'SF Pro Display Bold';
+	font-family: 'Poppins';
+	font-weight: 600;
 }
 
 h2 {
@@ -65,7 +66,8 @@ h2 {
 	font-size: 22px;
   font-style: normal;
   text-align: center;
-  font-family: 'SF Pro Display Medium';
+	font-family: 'Poppins';
+	font-weight: 400;
 }
 
 *,

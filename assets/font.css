@@ -1,5 +1,5 @@
 /* cyrillic-ext */
-@font-face {
+/* @font-face {
 	font-family: 'Roboto';
 	font-style: normal;
 	font-weight: 400;
@@ -33,7 +33,7 @@
 }
 
 @font-face {
-	font-family: 'SF Pro Display Regular';
+	font-family: 'Poppins';
 	font-style: normal;
 	src: url('~assets/fonts/SF-Pro-Display-Regular.otf');
 }
@@ -48,4 +48,4 @@
 	font-family: 'Altero Outline';
 	font-style: normal;
 	src: url('~assets/fonts/Altero-Outline.otf');
-}
+} */

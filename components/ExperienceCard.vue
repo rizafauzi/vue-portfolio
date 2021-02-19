@@ -175,7 +175,8 @@ h3 {
 	text-align: center;
 	letter-spacing: 1px;
 	background: #845FC0;
-	font-family: 'SF Pro Display Regular';
+	font-family: 'Poppins';
+	font-weight: 400;
 }
 
 .time-text {

@@ -239,7 +239,8 @@ h2 {
 	font-size: 36px;
   font-style: normal;
   text-align: center;
-  font-family: 'SF Pro Display Bold';
+  font-family: 'Poppins';
+	font-weight: 600;
 }
 
 h3 {
@@ -247,7 +248,8 @@ h3 {
 	color: #FFFFFF;
   text-align: left;
   font-style: normal;
-  font-family: 'SF Pro Display Regular';
+	font-family: 'Poppins';
+	font-weight: 400;
 }
 
 a {
@@ -255,7 +257,8 @@ a {
 	color: #FFFFFF;
   text-align: left;
   font-style: normal;
-  font-family: 'SF Pro Display Regular';
+	font-family: 'Poppins';
+	font-weight: 400;
 }
 
 </style>

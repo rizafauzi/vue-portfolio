@@ -1,5 +1,6 @@
 const pkg = require('./package')
-const path = require('path')
+const path = require('path');
+const { addListener } = require('process');
 
 module.exports = {
 	mode: 'spa',
@@ -14,7 +15,15 @@ module.exports = {
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0, viewport-fit=cover' },
 		],
 		link: [
-			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+			{
+				rel: 'preconnect',
+				href: 'https://fonts.gstatic.com'
+			},
+			{
+				rel: 'stylesheet',
+				href: 'https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap'
+			}
 		]
 	},
 
