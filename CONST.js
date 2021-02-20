@@ -227,6 +227,116 @@ export const projects = [
 	},
 ]
 
+export const skills = [
+	{
+		title: 'Software Development',
+		value: [
+			{
+				img: 'logo_reactjs',
+				label: 'ReactJS',
+			},
+			{
+				img: 'logo_vuejs',
+				label: 'VueJS'
+			},
+			{
+				img: 'logo_nuxtjs',
+				label: 'NuxtJS'
+			},
+			{
+				img: 'logo_nodejs',
+				label: 'NodeJS'
+			},
+			{
+				img: 'logo_swiftui',
+				label: 'SwiftUI'
+			},
+			{
+				img: 'logo_html',
+				label: 'Html'
+			},
+			{
+				img: 'logo_css',
+				label: 'Css'
+			},
+			{
+				img: 'logo_postgresql',
+				label: 'PostgreSQL'
+			},
+			{
+				img: 'logo_graphql',
+				label: 'GraphQL'
+			},
+			{
+				img: 'logo_expressjs',
+				label: 'ExpressJS'
+			},
+			{
+				img: 'logo_mysql',
+				label: 'MySQL'
+			},
+			{
+				img: 'logo_prisma',
+				label: 'Prisma'
+			},
+		]
+	},
+	{
+		title: 'Design Tools',
+		value: [
+			{
+				img: 'logo_figma',
+				label: 'Figma'
+			},
+			{
+				img: 'logo_marvel',
+				label: 'Marvel'
+			},
+			{
+				img: 'logo_sketch',
+				label: 'Sketch'
+			},
+			{
+				img: 'logo_xd',
+				label: 'Adobe XD'
+			},
+			{
+				img: 'logo_photoshop',
+				label: 'Photoshop'
+			},
+			{
+				img: 'logo_lightroom',
+				label: 'Lightroom'
+			},
+			{
+				img: 'logo_premiere',
+				label: 'Premiere'
+			},
+			{
+				img: 'logo_aftereffect',
+				label: 'Adobe AE'
+			},
+		]
+	},
+	{
+		title: 'Product Tools',
+		value: [
+			{
+				img: 'logo_notion',
+				label: 'Notion'
+			},
+			{
+				img: 'logo_office',
+				label: 'Office'
+			},
+			{
+				img: 'logo_asana',
+				label: 'Asana'
+			},
+		]
+	},
+]
+
 export const experience = [
 	{
 		id: 1,

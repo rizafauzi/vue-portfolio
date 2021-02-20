@@ -23,12 +23,6 @@
 
 <script>
 export default {
-	computed: {
-		// styleObject: function() {
-		// 	return {
-		// 	}
-		// }
-	},
 	methods: {
 		isMobile() {
       if (process.browser) {
@@ -47,48 +41,6 @@ export default {
 		},
 	},
 }
-// .project-card {
-// 	width: 70%;
-// 	height: 270px;
-// 	padding: 20px;
-// 	display: flex;
-// 	margin-bottom: 3vh;
-// 	border-radius: 30px;
-// 	align-items: flex-start;
-// 	background: rgba(61, 61, 61, 0.2);
-// 	border: solid 1px rgba(150, 150, 150, 0.5);
-// 	.project-image {
-// 		width: 25%;
-// 		height: 100%;
-// 		object-fit: cover;
-// 		border-radius: 20px;
-// 		flex-direction: row;
-// 		justify-content: center;
-// 	}
-// 	.project-content {
-// 		width: 75%;
-// 		height: 100%;
-// 		display: flex;
-// 		padding: 0% 3%;
-// 		flex-direction: column;
-// 		justify-content: space-between;
-// 		.button {
-// 			width: 35%;
-// 			padding: 4%;
-// 			border: none;
-// 			display: flex;
-// 			margin-top: 2%;
-// 			border-radius: 10px;
-// 			justify-content: space-between;
-// 			background: rgba(255, 255, 255, 0.2);
-// 			border: solid 1px rgba(255, 255, 255, 0.4);
-// 			.arrow {
-// 				width: 25px;
-// 				margin-left: 20px;
-// 			}
-// 		}
-// 	}
-// }
 </script>
 
 <style lang="scss" scoped>

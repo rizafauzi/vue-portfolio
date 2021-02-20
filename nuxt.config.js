@@ -42,6 +42,14 @@ module.exports = {
 		// { src: '@/plugins/nuxt-swiper-plugin.js', mode: 'client' },
 	],
 
+	gsap: {
+    extraPlugins: {
+			text: true,
+      scrollTo: true,
+      scrollTrigger: true
+    }
+  },
+
 	// pageTransition: {
   //   name: 'my-page',
   //   mode: 'out-in',
@@ -56,6 +64,7 @@ module.exports = {
 	},
 	
 	modules: [
+		'nuxt-gsap-module',
 		'@nuxtjs/auth',
 		'nuxt-purgecss',
 		// '@nuxtjs/axios',

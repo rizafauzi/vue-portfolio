@@ -69,7 +69,7 @@ export default {
 .top {
 	top: 0;
 	left: 0;
-	margin-left: (calc(var(--scroll) * -600));
+	margin-left: (calc(var(--scroll) * -800));
 	.title-font {
 		letter-spacing: 2px;
 		font-family: 'Bebas Neue';
@@ -83,7 +83,7 @@ export default {
 
 .bottom {
 	bottom: 0;
-	right: (calc(var(--scroll) * -600));
+	right: (calc(var(--scroll) * -800));
 	.title-font {
 		letter-spacing: 2px;
 		font-family: 'Bebas Neue';

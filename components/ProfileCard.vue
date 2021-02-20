@@ -25,7 +25,25 @@
 
 <script>
 export default {
+	mounted() {
+    this.animateOnScroll()
+  },
 	methods: {
+		animateOnScroll() {
+      this.$gsap.from('.wrapper-card', {
+        x: 500,
+				opacity: 0,
+				delay: 100,
+				duration: 1.5,
+				ease: 'Power1.easeInOut',
+        scrollTrigger: {
+          trigger: '.wrapper-card',
+					start: "top 100%",
+					end: "top 30%",
+					scrub: true
+        }
+      })
+    },
 		isMobile() {
       if (process.browser) {
 				if (window.innerWidth <= 768) {

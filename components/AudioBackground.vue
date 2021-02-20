@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="wrapper">
     <div id="green" class="button-wrapper" @click="toggleCarouselModal()">
       <div class="icon-wrapper">
@@ -57,9 +57,6 @@
 </template>
 
 <script>
-// <audio v-else id="audio" ref="audio" loop="loop" autoplay="autoplay">
-//       <source src="@/assets/music/background-audio.mp3" type="audio/mpeg">
-//     </audio>
 export default {
   data() {
     return {
@@ -224,4 +221,4 @@ export default {
   cursor: pointer;
   filter: drop-shadow(0px 0px 4px #FFFFFF);
 }
-</style>
+</style> -->

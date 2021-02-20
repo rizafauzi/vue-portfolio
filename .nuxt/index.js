@@ -16,6 +16,7 @@ import { createStore } from './store.js'
 import nuxt_plugin_markdownit_308e2dea from 'nuxt_plugin_markdownit_308e2dea' // Source: ./markdown-it.js (mode: 'all')
 import nuxt_plugin_cookieuniversalnuxt_1f7305a6 from 'nuxt_plugin_cookieuniversalnuxt_1f7305a6' // Source: ./cookie-universal-nuxt.js (mode: 'all')
 import nuxt_plugin_plugin_d630699e from 'nuxt_plugin_plugin_d630699e' // Source: ./lozad-module/plugin.js (mode: 'client')
+import nuxt_plugin_gsapModule_94de0bda from 'nuxt_plugin_gsapModule_94de0bda' // Source: ./gsapModule.js (mode: 'all')
 import nuxt_plugin_plugin_b82b8e8c from 'nuxt_plugin_plugin_b82b8e8c' // Source: ./auth/plugin.js (mode: 'all')
 
 // Component: <ClientOnly>
@@ -205,6 +206,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (process.client && typeof nuxt_plugin_plugin_d630699e === 'function') {
     await nuxt_plugin_plugin_d630699e(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_gsapModule_94de0bda === 'function') {
+    await nuxt_plugin_gsapModule_94de0bda(app.context, inject)
   }
 
   if (typeof nuxt_plugin_plugin_b82b8e8c === 'function') {

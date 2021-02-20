@@ -1,6 +1,6 @@
 <template>
 	<div class="container">
-		<div class="card" >
+		<div class="cards">
 			<img 
 				class="emoji"
 				src="~/static/img/memoji_celebrate.png" 
@@ -57,7 +57,7 @@ export default {
 	position: relative;
 	align-items: center;
 	justify-content: center;
-	.card {
+	.cards {
 		top: 10vh;
 		width: 70%;
 		height: 50vh;
@@ -86,7 +86,7 @@ export default {
 	}
 }
 
-.card:hover {
+.cards:hover {
 	transform: scale(1.08);
 	box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.4);
 }

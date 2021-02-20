@@ -12,10 +12,21 @@
 					<h3>{{ state.year }}</h3>
 				</div>
 				<div class="image-container">
-					<div class="image-wrapper">
+					<div class="image-wrapper" v-gsap.from="{
+						x: 150,
+						opacity: 0,
+						duration: 1.5,
+						ease: 'power2.inOut'
+					}">
 						<img :src="require(`~/assets/projects/${state.image}_desktop.jpg`)" />
 					</div>
-					<div class="image-wrapper-mobile">
+					<div class="image-wrapper-mobile" v-gsap.from="{
+						x: -150,
+						opacity: 0,
+						delay: 1,
+						duration: 1.5,
+						ease: 'power2.inOut'
+					}">
 						<img :src="require(`~/assets/projects/${state.image}_mobile.jpg`)" />
 					</div>
 				</div>
@@ -68,7 +79,25 @@
 <script>
 import TechUsedCard from '../../components/TechUsedCard.vue'
 import { projects } from '../../CONST'
+import { TweenMax } from 'gsap'
 export default {
+	transitions: {
+		mode: 'out-in',
+    css: false,
+		beforeEnter (el, done) {
+			TweenMax.from('img', 2, {
+        opacity: 0
+      })
+		},
+		leave (el, done) {
+      TweenMax.to('.image-wrapper', 1, {
+        ease: Back.easeInOut, x: "-400%", opacity: 0
+      })
+      TweenMax.to(el, 1, {
+        opacity: 0
+      })
+    }
+	},
 	components: {
 		TechUsedCard
 	},

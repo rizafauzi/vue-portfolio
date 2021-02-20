@@ -23,6 +23,10 @@
 			</div>
 		</section>
 		<section>
+			<Title :color="'#BEFFBD'" :title="softwareTitle"/>
+			<SkillSection :data="educations"/>
+		</section>
+		<section>
 			<Title :color="'#C6BDFF'" :title="experienceTitle"/>
 			<ExperienceSection :data="experience"/>
 		</section>
@@ -42,6 +46,7 @@ import ProjectCard from '../components/ProjectCard.vue'
 import ExperienceCard from '../components/ExperienceCard.vue'
 import ExperienceSection from '../components/ExperienceSection.vue'
 import EducationSection from '../components/EducationSection.vue'
+import SkillSection from '../components/SkillSection.vue'
 import { projects, experience, education } from '../CONST.js'
 export default {
   components: {
@@ -49,6 +54,7 @@ export default {
 		HelloCard,
 		ProfileCard,
 		ProjectCard,
+		SkillSection,
 		ExperienceCard,
 		EducationSection,
 		ExperienceSection
@@ -62,12 +68,25 @@ export default {
 			aboutTitle: 'ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT',
 			projectTitle: 'PROJECT PROJECT PROJECT PROJECT PROJECT PROJECT PROJECT PROJECT PROJECT PROJECT PROJECT PROJECT PROJECT PROJECT',
 			experienceTitle: 'EXPERIENCE EXPERIENCE EXPERIENCE EXPERIENCE EXPERIENCE EXPERIENCE EXPERIENCE EXPERIENCE EXPERIENCE EXPERIENCE ',
-			educationTitle: 'EDUCATION EDUCATION EDUCATION EDUCATION EDUCATION EDUCATION EDUCATION EDUCATION EDUCATION EDUCATION EDUCATION '
+			educationTitle: 'EDUCATION EDUCATION EDUCATION EDUCATION EDUCATION EDUCATION EDUCATION EDUCATION EDUCATION EDUCATION EDUCATION ',
+			softwareTitle: 'SOFTWARE-SKILLS SOFTWARE-SKILLS SOFTWARE-SKILLS SOFTWARE-SKILLS SOFTWARE-SKILLS SOFTWARE-SKILLS SOFTWARE-SKILLS'
 		}
   },
   methods: {
+		projectOnScroll() {
+      this.$gsap.from('.project-wrapper', {
+        x: 200,
+				delay: 2,
+        scrollTrigger: {
+          trigger: '.project-wrapper',
+					start: "top 85%",
+					end: "top 5%"
+        }
+      })
+    },
   },
   mounted() {
+		this.projectOnScroll()
   }
 }
 </script>

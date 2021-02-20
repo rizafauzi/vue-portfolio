@@ -70,6 +70,11 @@ h2 {
 	font-weight: 400;
 }
 
+h3 {
+	color: #FFFFFF;
+	font-family: 'Poppins';
+}
+
 *,
 *:before,
 *:after {
