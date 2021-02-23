@@ -128,7 +128,7 @@ export default {
 		width: 90%;
 		height: 70%;
 		position: absolute;
-		border-radius: 20px;
+		border-radius: 15px;
 		transform-origin: top left;
 		background: var(--gradient);
 		transition: all 0.4s cubic-bezier(0.62, 0.01, 0.33, 0.97);
@@ -159,7 +159,7 @@ export default {
 			justify-content: center;
 			backdrop-filter: blur(40px);
 			background: rgba(0, 0, 0, 0.2);
-			border-radius: 0px 20px 20px 20px;
+			border-radius: 0px 15px 15px 15px;
 			border: solid 1px rgba(150, 150, 150, 0.5);
 			@media (max-width: 768px) {
 				height: auto;
@@ -181,10 +181,10 @@ export default {
 		.univ-desc {
 			top: 10%;
 			right: 0;
-			width: 78%;
+			width: 80%;
 			display: flex;
 			padding: 25px;
-			border-radius: 10px;
+			border-radius: 15px;
 			flex-direction: column;
 			backdrop-filter: blur(40px);
 			background: rgba(0, 0, 0, 0.2);

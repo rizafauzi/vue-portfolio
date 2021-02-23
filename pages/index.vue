@@ -1,5 +1,6 @@
 <template>
-	<div>
+	<section>
+		<AssistiveTouch />
 		<section class="wrapper">
 			<img 
 				class="background"
@@ -34,15 +35,20 @@
 			<Title :color="'#BEFFBD'" :title="educationTitle"/>
 			<EducationSection :data="educations"/>
 		</section>
-	</div>
+		<section>
+			<Footer/>
+		</section>
+	</section>
 </template>
 
 
 <script>
 import Title from '../components/Title.vue'
+import Footer from '../components/Footer.vue'
 import HelloCard from '../components/HelloCard.vue'
 import ProfileCard from '../components/ProfileCard.vue'
 import ProjectCard from '../components/ProjectCard.vue'
+import AssistiveTouch from '../components/AssistiveTouch.vue'
 import ExperienceCard from '../components/ExperienceCard.vue'
 import ExperienceSection from '../components/ExperienceSection.vue'
 import EducationSection from '../components/EducationSection.vue'
@@ -51,10 +57,12 @@ import { projects, experience, education } from '../CONST.js'
 export default {
   components: {
 		Title,
+		Footer,
 		HelloCard,
 		ProfileCard,
 		ProjectCard,
 		SkillSection,
+		AssistiveTouch,
 		ExperienceCard,
 		EducationSection,
 		ExperienceSection
@@ -94,6 +102,7 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper {
+	overflow: hidden;
 	padding-top: 10vh; 
 	position: relative;
 	background: #1E1D3C;

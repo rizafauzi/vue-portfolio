@@ -118,7 +118,35 @@ export const projects = [
 				url: 'https://nuxtjs.org',
 				firstColor: '#FF9CE9',
 				secondColor: '#8E64C4'
-			}
+			},
+			{
+				label: 'Vue.js',
+				image: 'logo_vuejs.png',
+				url: 'https://vuejs.org',
+				firstColor: '#7ED19A',
+				secondColor: '#5198B7'
+			},
+			{
+				label: 'Nuxt.js',
+				image: 'logo_nuxtjs.png',
+				url: 'https://nuxtjs.org',
+				firstColor: '#FF9CE9',
+				secondColor: '#8E64C4'
+			},
+			{
+				label: 'Vue.js',
+				image: 'logo_vuejs.png',
+				url: 'https://vuejs.org',
+				firstColor: '#7ED19A',
+				secondColor: '#5198B7'
+			},
+			{
+				label: 'Nuxt.js',
+				image: 'logo_nuxtjs.png',
+				url: 'https://nuxtjs.org',
+				firstColor: '#FF9CE9',
+				secondColor: '#8E64C4'
+			},
 		]
 	},
 	{
@@ -225,11 +253,55 @@ export const projects = [
 			}
 		]
 	},
+	{
+		id: 7,
+		title: 'Asset Resource Management System',
+		slug: 'arms',
+		year: 'Dec 2018 - Sept 2019',
+		description: 'I’m experienced in designing and developing in Web and Mobile Apps with a passion for the Love of bringing delightful and human-centric experience to Life.',
+		summary: 'I’m experienced in designing and developing in Web and Mobile Apps with a passion for the Love of bringing delightful and human-centric experience to Life.',
+		navigation: '#',
+		firstColor: '#FF9CE9',
+		secondColor: '#8E64C4',
+		role: 'Backend Engineer',
+		website: null,
+		image: 'lms',
+		techUsed: [
+			{
+				label: 'Node.js',
+				image: 'logo_nodejs.png',
+				url: 'https://vuejs.org',
+				firstColor: '#7ED19A',
+				secondColor: '#5198B7'
+			},
+			{
+				label: 'PostgreSQL',
+				image: 'logo_postgresql.png',
+				url: 'https://nuxtjs.org',
+				firstColor: '#FF9CE9',
+				secondColor: '#8E64C4'
+			},
+			{
+				label: 'Prisma',
+				image: 'logo_prisma.png',
+				url: 'https://nuxtjs.org',
+				firstColor: '#FF9CE9',
+				secondColor: '#8E64C4'
+			},
+			{
+				label: 'GraphQL',
+				image: 'logo_graphql.png',
+				url: 'https://nuxtjs.org',
+				firstColor: '#FF9CE9',
+				secondColor: '#8E64C4'
+			},
+		]
+	},
 ]
 
 export const skills = [
 	{
-		title: 'Software Development',
+		title: 'Development',
 		value: [
 			{
 				img: 'logo_reactjs',
@@ -340,6 +412,7 @@ export const skills = [
 export const experience = [
 	{
 		id: 1,
+		slug: 'bibit',
 		title: 'Bibit.id',
 		role: 'Frontend Engineer',
 		status: 'Full-time',
@@ -349,9 +422,11 @@ export const experience = [
 		link: '',
 		firstColor: '#DC59DF',
 		secondColor: '#5236A1',
+		projects: []
 	},
 	{
 		id: 2,
+		slug: 'narasi',
 		title: 'Narasi.tv',
 		role: 'Frontend Developer',
 		status: 'Contract',
@@ -361,9 +436,11 @@ export const experience = [
 		link: '',
 		firstColor: '#60CECE',
 		secondColor: '#329B3D',
+		projects: ['playfest', 'virtual-playfest', 'ibam', 'narasitv', 'event-narasi']
 	},
 	{
 		id: 3,
+		slug: 'xti',
 		title: 'Xapiens Teknologi Indonesia',
 		role: 'Fullstack Engineer',
 		status: 'Full-time',
@@ -373,9 +450,11 @@ export const experience = [
 		link: '',
 		firstColor: '#F4E984',
 		secondColor: '#C24D3D',
+		projects: ['arms', 'lms', 'onemedix']
 	},
 	{
 		id: 4,
+		slug: 'ugm',
 		title: 'Univesitas Gadjah Mada',
 		role: 'Assistant Lecturer',
 		status: 'Full-time',
@@ -385,9 +464,11 @@ export const experience = [
 		link: '#7BD86C',
 		firstColor: '#E37575',
 		secondColor: '#AC46C6',
+		projects: []
 	},
 	{
 		id: 5,
+		slug: 'pln',
 		title: 'PLN',
 		role: 'Internship',
 		status: '',
@@ -396,7 +477,8 @@ export const experience = [
 		image: 'logo_pln',
 		link: '#AC46C6',
 		firstColor: '#75DDE3',
-		secondColor: '#824A9C'
+		secondColor: '#824A9C',
+		projects: []
 	},
 ]
 
@@ -418,8 +500,8 @@ export const education = [
 		major: 'Information System',
 		image: 'logo_ui',
 		link: 'https://www.ui.ac.id/',
-		firstColor: '#F4E984',
-		secondColor: '#C24D3D',
+		firstColor: '#E37575',
+		secondColor: '#AC46C6'
 	},
 	{
 		id: 1,
@@ -428,7 +510,7 @@ export const education = [
 		major: 'Electrical Engineering',
 		image: 'logo_ugm',
 		link: 'https://ugm.ac.id/',
-		firstColor: '#E37575',
-		secondColor: '#AC46C6',
+		firstColor: '#F4E984',
+		secondColor: '#C24D3D'
 	},
 ]

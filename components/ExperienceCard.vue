@@ -23,7 +23,7 @@
 			<div class="profile-content">
 				<h1 class="spacer">{{data.title}}</h1>
 				<h3>{{data.role}}</h3>
-				<div class="button">
+				<div class="button" @click="navigate(data.slug)">
 					<h3>See Detail</h3>
 				</div>
 			</div>
@@ -42,6 +42,11 @@ export default {
 				'--transform': this.odd ? 'rotate(10deg) skew(0deg, 5deg)' : 'rotate(-10deg) skew(0deg, -5deg)',
 				'--position': this.odd ? 'right' : 'left',
 			}
+		}
+	},
+	methods: {
+		navigate(url) {
+			this.$router.push(`/experience/${url}`)
 		}
 	},
 	props: {

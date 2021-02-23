@@ -33,11 +33,15 @@ export default {
 <style lang="scss" scoped>
 .container {
 	.wrapper {
-		width: 90%;
+		width: 70%;
 		display: flex;
-		margin-left: 5%;
+		margin-left: 15%;
 		margin-bottom: 15vh;
 		flex-direction: column;
+		@media (max-width: 768px) {
+			width: 90%;
+			margin-left: 5%;
+		}
 		.category {
 			display: flex;
 			margin-top: 50px;
@@ -57,7 +61,7 @@ export default {
 			.software-wrapper {
 				display: grid;
 				width: 100%;
-				grid-template-columns: repeat(8, 1fr);
+				grid-template-columns: repeat(6, 1fr);
 				@media (max-width: 768px) {
 					grid-template-columns: repeat(4, 1fr);
 				}
@@ -83,7 +87,7 @@ export default {
 						align-items: center;
 						border-radius: 10px;
 						justify-content: center;
-						border: solid 1px white;
+						border: solid 1px #999;
 						box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 						@media (max-width: 768px) {
 							width: 65px;

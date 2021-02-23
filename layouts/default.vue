@@ -59,6 +59,9 @@ h1 {
   text-align: center;
 	font-family: 'Poppins';
 	font-weight: 600;
+	@media (max-width: 768px) {
+		font-size: 32px;
+	}
 }
 
 h2 {

@@ -52,10 +52,13 @@
 			<div class="wrapper">
 				<h2>Tech Used</h2>
 				<div class="spacer" />
-				<div class="tech-used">
-					<div v-for="(data, index) in state.techUsed" :key="index">
-							<TechUsedCard :data="data" />
-					</div>
+				<div class="scroll-wrapper">
+					<vue-horizontal-list :items="state.techUsed" 
+					:options="techUsedOptions">
+						<template v-slot:default="{item}">
+							<TechUsedCard :data="item" />
+						</template>
+					</vue-horizontal-list>
 				</div>
 			</div>
 			<div class="wrapper">
@@ -63,7 +66,7 @@
 				<div class="spacer" />
 				<h3>{{ state.role }}</h3>
 			</div>
-			<div class="wrapper padding">
+			<!--<div class="wrapper padding">
 				<h2>Other Projects</h2>
 				<div class="spacer" />
 				<div class="tech-used">
@@ -71,13 +74,14 @@
 							<TechUsedCard :data="data" />
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</section>
 	</div>
 </template>
 
 <script>
 import TechUsedCard from '../../components/TechUsedCard.vue'
+import VueHorizontalList from "vue-horizontal-list";
 import { projects } from '../../CONST'
 import { TweenMax } from 'gsap'
 export default {
@@ -99,11 +103,19 @@ export default {
     }
 	},
 	components: {
-		TechUsedCard
+		TechUsedCard,
+		VueHorizontalList
 	},
 	methods: {
 		navigate(url) {
 			window.open(url, '_blank')
+		}
+	},
+	computed: {
+		styleObject: function() {
+			return {
+				'--height': `280px`
+			}
 		}
 	},
 	data() {
@@ -122,7 +134,19 @@ export default {
 					mobile: null,
 				},
 				techUsed: []
-			}
+			},
+			techUsedOptions: {
+				list: {
+					padding: 24
+				},
+				responsive: [
+					{ end: 576, size: 2 },
+					{ start: 576, end: 768, size: 3 },
+					{ start: 768, end: 992, size: 4 },
+					{ start: 992, end: 1200, size: 5 },
+					{ start: 1200, size: 5 },
+				]
+			},
 		}
 	},
 	created() {
@@ -149,6 +173,9 @@ export default {
 	@media (min-width: 2000px) {
 		height: 100vh;
 	}
+	@media (max-width: 768px) {
+		height: 500px;
+	}
 }
 
 .backdrop {
@@ -160,6 +187,9 @@ export default {
 	position: absolute;
 	backdrop-filter: blur(25px);
 	background: linear-gradient(to bottom, rgba(30, 29, 60, 0.5), #1E1D3C);
+	@media (max-width: 768px) {
+		height: 500px;
+	}
 }
 
 .header {
@@ -174,6 +204,9 @@ export default {
 	position: relative;
 	align-items: center;
 	flex-direction: column;
+	@media (max-width: 768px) {
+		height: 500px;
+	}
 	.title {
 		width: 100%;
 		display: flex;
@@ -197,6 +230,12 @@ export default {
 			backdrop-filter: blur(20px);
 			background: rgba(0, 0, 0, 0.2);
 			border: solid 1px rgba(150, 150, 150, 0.5);
+			@media (max-width: 768px) {
+				width: 100%;
+				right: 0%;
+				padding: 5px;
+				border-radius: 20px;
+			}
 			img {
 				object-fit: cover;
 				border-radius: 15px;
@@ -204,7 +243,7 @@ export default {
 		}
 		.image-wrapper-mobile {
 			width: 25%;
-			left: 10%;
+			left: 5%;
 			top: 15vh;
 			padding: 15px;
 			position: absolute;
@@ -212,6 +251,13 @@ export default {
 			backdrop-filter: blur(20px);
 			background: rgba(0, 0, 0, 0.2);
 			border: solid 1px rgba(150, 150, 150, 0.5);
+			@media (max-width: 768px) {
+				width: 50%;
+				top: 20vh;
+				left: 10%;
+				padding: 5px;
+				border-radius: 20px;
+			}
 			img {
 				object-fit: cover;
 				border-radius: 15px;
@@ -221,21 +267,22 @@ export default {
 }
 
 .wrapper {
-	width: 90%;
-	margin-left: 5%;
+	width: 70%;
+	margin-left: 15%;
 	display: flex;
 	margin-top: 50px;
 	flex-direction: column;
 	align-items: flex-start;
+	overflow: hidden;
 	.spacer {
 		height: 1px;
 		width: 100%;
 		margin: 10px 0px;
 		background: rgba(255, 255, 255, 0.4);
 	}
-	.tech-used {
-		display: flex;
-		flex-direction: row;
+	.scroll-wrapper {
+		width: 90%;
+		margin-left: 5%;
 	}
 	.button {
 		padding: 2%;
@@ -263,22 +310,34 @@ export default {
 	padding-bottom: 10vh;
 }
 
+h1 {
+	@media (max-width: 768px) {
+		font-size: 28px;
+	}
+}
+
 h2 {
 	color: #FFFFFF;
-	font-size: 36px;
   font-style: normal;
   text-align: center;
   font-family: 'Poppins';
 	font-weight: 600;
+	font-size: 32px;
+	@media (max-width: 768px) {
+		font-size: 20px;
+	}
 }
 
 h3 {
-	font-size: 22px;
 	color: #FFFFFF;
   text-align: left;
   font-style: normal;
 	font-family: 'Poppins';
 	font-weight: 400;
+	font-size: 20px;
+	@media (max-width: 768px) {
+		font-size: 12px;
+	}
 }
 
 a {

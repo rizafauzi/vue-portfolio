@@ -47,10 +47,18 @@ export default {
 <style lang="scss" scoped>
 .wrapper-card {
 	height: 45vh;
-	width: 250px;
+	width: 230px;
 	display: flex;
 	margin-right: 20px;
 	position: relative;
+	@media (max-width: 1440px) {
+		width: 180px;
+		height: 45vh;
+	}
+	@media (max-width: 768px) {
+		width: 150px;
+		height: 40vh;
+	}
 	.time-wrapper {
 		height: auto;
 		z-index: 100;
@@ -77,6 +85,10 @@ export default {
 		background: rgba(50, 50, 50, 0.1);
 		border: solid 1px rgba(150, 150, 150, 0.5);
 		transition: all 0.4s ease;
+		@media (max-width: 768px) {
+			border-radius: 15px;
+			height: 40vh;
+		}
 		.profile-content {
 			padding: 4%;
 			display: flex;
@@ -116,6 +128,10 @@ export default {
 		background: var(--gradient);
 		transform-origin: top left;
 		transition: all 0.4s cubic-bezier(0.62, 0.01, 0.33, 0.97);
+		@media (max-width: 768px) {
+			height: 40vh;
+			border-radius: 15px;
+		}
 	}
 }
 
@@ -142,7 +158,7 @@ export default {
 
 .wrapper-card:hover .background-card {
 	width: 82%;
-	transform: rotate(-10deg) skew(0deg, -5deg);
+	transform: rotate(-2deg) skew(0deg, -5deg);
 	box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.3);
 }
 
