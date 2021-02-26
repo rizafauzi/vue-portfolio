@@ -5,7 +5,7 @@
 			<div class="univ-logo">
 				<img 
 					class="logo-univ"
-					:src="require(`~/assets/logo/${data.image}.png`)" 
+					:src="require(`~/assets/logo/${data.image}`)" 
 				/>
 			</div>
 			<div class="univ-desc">

@@ -1,7 +1,7 @@
 <template>
 	<section>
-		<AssistiveTouch />
-		<section class="wrapper">
+		<AssistiveTouch :jump="actionJump"  />
+		<section id="header" class="wrapper">
 			<img 
 				class="background"
 				src="~/static/img/background_home.jpg" 
@@ -9,11 +9,11 @@
 			<Title :color="'#CBFFFF'" :title="title"/>
 			<HelloCard />
 		</section>
-		<section>
+		<section id="about">
 			<Title :color="'#EFFF8D'" :title="aboutTitle"/>
 			<ProfileCard />
 		</section>
-		<section>
+		<section id="projects">
 			<Title :color="'#FFDDA9'" :title="projectTitle"/>
 			<div class="container">
 				<div class="project-wrapper">
@@ -81,20 +81,16 @@ export default {
 		}
   },
   methods: {
-		projectOnScroll() {
-      this.$gsap.from('.project-wrapper', {
-        x: 200,
-				delay: 2,
-        scrollTrigger: {
-          trigger: '.project-wrapper',
-					start: "top 85%",
-					end: "top 5%"
-        }
-      })
-    },
-  },
-  mounted() {
-		this.projectOnScroll()
+		actionJump(e) {
+			if (process.browser) {
+				if (e === 'about' || e === 'projects') {
+					const element = document.getElementById(e)
+					element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+				} else {
+					window.open(e, '_blank')
+				}
+			}
+		}
   }
 }
 </script>

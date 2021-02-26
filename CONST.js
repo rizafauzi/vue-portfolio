@@ -14,22 +14,7 @@ export const projects = [
 		website: 'https://virtualplayfest.narasi.tv',
 		role: 'Frontend Developer',
 		image: 'virtual_playfest',
-		techUsed: [
-			{
-				label: 'Vue.js',
-				image: 'logo_vuejs.png',
-				url: 'https://vuejs.org',
-				firstColor: '#F7B46A',
-				secondColor: '#FC4E58'
-			},
-			{
-				label: 'Nuxt.js',
-				image: 'logo_nuxtjs.png',
-				url: 'https://nuxtjs.org',
-				firstColor: '#DC59DF',
-				secondColor: '#5236A1'
-			}
-		]
+		techUsed: ['vue-js', 'nuxt-js']
 	},
 	{
 		id: 1,
@@ -44,22 +29,7 @@ export const projects = [
 		role: 'Frontend Developer',
 		website: 'https://virtualplayfest.narasi.tv',
 		image: 'playfest',
-		techUsed: [
-			{
-				label: 'Vue.js',
-				image: 'logo_vuejs.png',
-				url: 'https://vuejs.org',
-				firstColor: '#F7B46A',
-				secondColor: '#FC4E58'
-			},
-			{
-				label: 'Nuxt.js',
-				image: 'logo_nuxtjs.png',
-				url: 'https://nuxtjs.org',
-				firstColor: '#DC59DF',
-				secondColor: '#5236A1'
-			}
-		]
+		techUsed: ['vue-js', 'nuxt-js']
 	},
 	{
 		id: 2,
@@ -74,22 +44,7 @@ export const projects = [
 		role: 'Frontend Developer',
 		website: 'https://virtualplayfest.narasi.tv',
 		image: 'ibam',
-		techUsed: [
-			{
-				label: 'Vue.js',
-				image: 'logo_vuejs.png',
-				url: 'https://vuejs.org',
-				firstColor: '#7ED19A',
-				secondColor: '#5198B7'
-			},
-			{
-				label: 'Nuxt.js',
-				image: 'logo_nuxtjs.png',
-				url: 'https://nuxtjs.org',
-				firstColor: '#FF9CE9',
-				secondColor: '#8E64C4'
-			}
-		]
+		techUsed: ['vue-js', 'nuxt-js']
 	},
 	{
 		id: 3,
@@ -104,50 +59,7 @@ export const projects = [
 		role: 'Frontend Developer',
 		website: 'https://virtualplayfest.narasi.tv',
 		image: 'narasi_tv',
-		techUsed: [
-			{
-				label: 'Vue.js',
-				image: 'logo_vuejs.png',
-				url: 'https://vuejs.org',
-				firstColor: '#7ED19A',
-				secondColor: '#5198B7'
-			},
-			{
-				label: 'Nuxt.js',
-				image: 'logo_nuxtjs.png',
-				url: 'https://nuxtjs.org',
-				firstColor: '#FF9CE9',
-				secondColor: '#8E64C4'
-			},
-			{
-				label: 'Vue.js',
-				image: 'logo_vuejs.png',
-				url: 'https://vuejs.org',
-				firstColor: '#7ED19A',
-				secondColor: '#5198B7'
-			},
-			{
-				label: 'Nuxt.js',
-				image: 'logo_nuxtjs.png',
-				url: 'https://nuxtjs.org',
-				firstColor: '#FF9CE9',
-				secondColor: '#8E64C4'
-			},
-			{
-				label: 'Vue.js',
-				image: 'logo_vuejs.png',
-				url: 'https://vuejs.org',
-				firstColor: '#7ED19A',
-				secondColor: '#5198B7'
-			},
-			{
-				label: 'Nuxt.js',
-				image: 'logo_nuxtjs.png',
-				url: 'https://nuxtjs.org',
-				firstColor: '#FF9CE9',
-				secondColor: '#8E64C4'
-			},
-		]
+		techUsed: ['figma', 'xd', 'prisma']
 	},
 	{
 		id: 4,
@@ -162,22 +74,7 @@ export const projects = [
 		role: 'Frontend Developer',
 		website: 'https://event.narasi.tv',
 		image: 'event_narasi',
-		techUsed: [
-			{
-				label: 'Vue.js',
-				image: 'logo_vuejs.png',
-				url: 'https://vuejs.org',
-				firstColor: '#F7B46A',
-				secondColor: '#FC4E58'
-			},
-			{
-				label: 'Nuxt.js',
-				image: 'logo_nuxtjs.png',
-				url: 'https://nuxtjs.org',
-				firstColor: '#DC59DF',
-				secondColor: '#5236A1'
-			}
-		]
+		techUsed: ['vue-js', 'nuxt-js']
 	},
 	{
 		id: 5,
@@ -192,36 +89,7 @@ export const projects = [
 		role: 'Tech Leader',
 		website: 'https://virtualplayfest.narasi.tv',
 		image: 'pcmi',
-		techUsed: [
-			{
-				label: 'React.js',
-				image: 'logo_reactjs.png',
-				url: 'https://vuejs.org',
-				firstColor: '#7ED19A',
-				secondColor: '#5198B7'
-			},
-			{
-				label: 'Node.js',
-				image: 'logo_nodejs.png',
-				url: 'https://nuxtjs.org',
-				firstColor: '#FF9CE9',
-				secondColor: '#8E64C4'
-			},
-			{
-				label: 'Postgresql',
-				image: 'logo_postgresql.png',
-				url: 'https://nuxtjs.org',
-				firstColor: '#FF9CE9',
-				secondColor: '#8E64C4'
-			},
-			{
-				label: 'React Native',
-				image: 'logo_reactjs.png',
-				url: 'https://nuxtjs.org',
-				firstColor: '#FF9CE9',
-				secondColor: '#8E64C4'
-			},
-		]
+		techUsed: ['react-js', 'xd', 'node-js', 'postgresql', 'express-js']
 	},
 	{
 		id: 6,
@@ -236,22 +104,7 @@ export const projects = [
 		role: 'Tech Leader',
 		website: 'https://virtualplayfest.narasi.tv',
 		image: 'lms',
-		techUsed: [
-			{
-				label: 'Vue.js',
-				image: 'logo_vuejs.png',
-				url: 'https://vuejs.org',
-				firstColor: '#7ED19A',
-				secondColor: '#5198B7'
-			},
-			{
-				label: 'Nuxt.js',
-				image: 'logo_nuxtjs.png',
-				url: 'https://nuxtjs.org',
-				firstColor: '#FF9CE9',
-				secondColor: '#8E64C4'
-			}
-		]
+		techUsed: ['xd', 'react-js']
 	},
 	{
 		id: 7,
@@ -265,91 +118,112 @@ export const projects = [
 		secondColor: '#8E64C4',
 		role: 'Backend Engineer',
 		website: null,
-		image: 'lms',
-		techUsed: [
-			{
-				label: 'Node.js',
-				image: 'logo_nodejs.png',
-				url: 'https://vuejs.org',
-				firstColor: '#7ED19A',
-				secondColor: '#5198B7'
-			},
-			{
-				label: 'PostgreSQL',
-				image: 'logo_postgresql.png',
-				url: 'https://nuxtjs.org',
-				firstColor: '#FF9CE9',
-				secondColor: '#8E64C4'
-			},
-			{
-				label: 'Prisma',
-				image: 'logo_prisma.png',
-				url: 'https://nuxtjs.org',
-				firstColor: '#FF9CE9',
-				secondColor: '#8E64C4'
-			},
-			{
-				label: 'GraphQL',
-				image: 'logo_graphql.png',
-				url: 'https://nuxtjs.org',
-				firstColor: '#FF9CE9',
-				secondColor: '#8E64C4'
-			},
-		]
+		image: 'arms',
+		techUsed: ['node-js', 'graphql', 'express-js', 'postgresql', 'prisma']
 	},
 ]
+
+// 'vue-js', 'nuxt-js', 'react-js', 'html', 'css', 'postgresql', 'mysql', 'swiftui'
 
 export const skills = [
 	{
 		title: 'Development',
 		value: [
 			{
-				img: 'logo_reactjs',
+				img: 'logo_reactjs.png',
 				label: 'ReactJS',
+				slug: 'react-js',
+				url: 'https://reactjs.org',
+				firstColor: '#F0326E',
+				secondColor: '#802C6E'
 			},
 			{
-				img: 'logo_vuejs',
-				label: 'VueJS'
+				img: 'logo_vuejs.png',
+				label: 'VueJS',
+				slug: 'vue-js',
+				url: 'https://vuejs.org',
+				firstColor: '#FDF6F0',
+				secondColor: '#FBBC58'
 			},
 			{
-				img: 'logo_nuxtjs',
-				label: 'NuxtJS'
+				img: 'logo_nuxtjs.png',
+				label: 'NuxtJS',
+				slug: 'nuxt-js',
+				url: 'https://nuxtjs.org',
+				firstColor: '#EED5D1',
+				secondColor: '#D0114D'
 			},
 			{
-				img: 'logo_nodejs',
-				label: 'NodeJS'
+				img: 'logo_nodejs.png',
+				label: 'NodeJS',
+				slug: 'node-js',
+				url: 'https://nodejs.org/en/',
+				firstColor: '#FDC2B1',
+				secondColor: '#D186A0'
 			},
 			{
-				img: 'logo_swiftui',
-				label: 'SwiftUI'
+				img: 'logo_swiftui.png',
+				label: 'SwiftUI',
+				slug: 'swiftui',
+				url: 'https://developer.apple.com/xcode/swiftui/',
+				firstColor: '#EECECE',
+				secondColor: '#CF5991'
 			},
 			{
-				img: 'logo_html',
-				label: 'Html'
+				img: 'logo_html.png',
+				label: 'Html',
+				slug: 'html',
+				url: 'https://developer.mozilla.org/id/docs/Web/Guide/HTML/HTML5',
+				firstColor: '#043353',
+				secondColor: '#18A4E0'
 			},
 			{
-				img: 'logo_css',
-				label: 'Css'
+				img: 'logo_css.png',
+				label: 'Css',
+				slug: 'css',
+				url: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+				firstColor: '#FDD3E4',
+				secondColor: '#C63968'
 			},
 			{
-				img: 'logo_postgresql',
-				label: 'PostgreSQL'
+				img: 'logo_postgresql.png',
+				label: 'PostgreSQL',
+				slug: 'postgresql',
+				url: 'https://vuejs.org',
+				firstColor: '#B4E55C',
+				secondColor: '#275A53'
 			},
 			{
-				img: 'logo_graphql',
-				label: 'GraphQL'
+				img: 'logo_graphql.png',
+				label: 'GraphQL',
+				slug: 'graphql',
+				url: 'https://www.postgresql.org/',
+				firstColor: '#7ED19A',
+				secondColor: '#5198B7'
 			},
 			{
-				img: 'logo_expressjs',
-				label: 'ExpressJS'
+				img: 'logo_expressjs.png',
+				label: 'ExpressJS',
+				slug: 'express-js',
+				url: 'https://expressjs.com/',
+				firstColor: '#7ED19A',
+				secondColor: '#5198B7'
 			},
 			{
-				img: 'logo_mysql',
-				label: 'MySQL'
+				img: 'logo_mysql.png',
+				label: 'MySQL',
+				slug: 'mysql',
+				url: 'https://www.mysql.com/',
+				firstColor: '#F0EFEA',
+				secondColor: '#D5C4B4'
 			},
 			{
-				img: 'logo_prisma',
-				label: 'Prisma'
+				img: 'logo_prisma.png',
+				label: 'Prisma',
+				slug: 'prisma',
+				url: 'https://www.prisma.io/',
+				firstColor: '#FAF8ED',
+				secondColor: '#B9A6E0'
 			},
 		]
 	},
@@ -357,36 +231,68 @@ export const skills = [
 		title: 'Design Tools',
 		value: [
 			{
-				img: 'logo_figma',
-				label: 'Figma'
+				img: 'logo_figma.png',
+				label: 'Figma',
+				slug: 'figma',
+				url: 'http://figma.com/',
+				firstColor: '#F5C6AB',
+				secondColor: '#B40D1A'
 			},
 			{
-				img: 'logo_marvel',
-				label: 'Marvel'
+				img: 'logo_marvel.png',
+				label: 'Marvel',
+				slug: 'marvel',
+				url: 'https://marvelapp.com/',
+				firstColor: '#7ED19A',
+				secondColor: '#5198B7'
 			},
 			{
-				img: 'logo_sketch',
-				label: 'Sketch'
+				img: 'logo_sketch.png',
+				label: 'Sketch',
+				slug: 'marvel',
+				url: 'https://marvelapp.com/',
+				firstColor: '#7ED19A',
+				secondColor: '#5198B7'
 			},
 			{
-				img: 'logo_xd',
-				label: 'Adobe XD'
+				img: 'logo_xd.png',
+				label: 'Adobe XD',
+				slug: 'xd',
+				url: 'https://marvelapp.com/',
+				firstColor: '#7ED19A',
+				secondColor: '#5198B7'
 			},
 			{
-				img: 'logo_photoshop',
-				label: 'Photoshop'
+				img: 'logo_photoshop.png',
+				label: 'Photoshop',
+				slug: 'marvel',
+				url: 'https://marvelapp.com/',
+				firstColor: '#7ED19A',
+				secondColor: '#5198B7'
 			},
 			{
-				img: 'logo_lightroom',
-				label: 'Lightroom'
+				img: 'logo_lightroom.png',
+				label: 'Lightroom',
+				slug: 'lightroom',
+				url: 'https://marvelapp.com/',
+				firstColor: '#7ED19A',
+				secondColor: '#5198B7'
 			},
 			{
-				img: 'logo_premiere',
-				label: 'Premiere'
+				img: 'logo_premiere.png',
+				label: 'Premiere',
+				slug: 'premiere',
+				url: 'https://marvelapp.com/',
+				firstColor: '#7ED19A',
+				secondColor: '#5198B7'
 			},
 			{
-				img: 'logo_aftereffect',
-				label: 'Adobe AE'
+				img: 'logo_aftereffect.png',
+				label: 'Adobe AE',
+				slug: 'ae',
+				url: 'https://marvelapp.com/',
+				firstColor: '#7ED19A',
+				secondColor: '#5198B7'
 			},
 		]
 	},
@@ -394,16 +300,28 @@ export const skills = [
 		title: 'Product Tools',
 		value: [
 			{
-				img: 'logo_notion',
-				label: 'Notion'
+				img: 'logo_notion.png',
+				label: 'Notion',
+				slug: 'marvel',
+				url: 'https://marvelapp.com/',
+				firstColor: '#7ED19A',
+				secondColor: '#5198B7'
 			},
 			{
-				img: 'logo_office',
-				label: 'Office'
+				img: 'logo_office.png',
+				label: 'Office',
+				slug: 'marvel',
+				url: 'https://marvelapp.com/',
+				firstColor: '#7ED19A',
+				secondColor: '#5198B7'
 			},
 			{
-				img: 'logo_asana',
-				label: 'Asana'
+				img: 'logo_asana.png',
+				label: 'Asana',
+				slug: 'marvel',
+				url: 'https://marvelapp.com/',
+				firstColor: '#7ED19A',
+				secondColor: '#5198B7'
 			},
 		]
 	},
@@ -418,7 +336,7 @@ export const experience = [
 		status: 'Full-time',
 		startTime: 'November 2020',
 		endTime: 'Present',
-		image: 'logo_bibit',
+		image: 'logo_bibit.png',
 		link: '',
 		firstColor: '#DC59DF',
 		secondColor: '#5236A1',
@@ -432,7 +350,7 @@ export const experience = [
 		status: 'Contract',
 		startTime: 'September 2020',
 		endTime: 'Present',
-		image: 'logo_narasi',
+		image: 'logo_narasi.png',
 		link: '',
 		firstColor: '#60CECE',
 		secondColor: '#329B3D',
@@ -446,7 +364,7 @@ export const experience = [
 		status: 'Full-time',
 		startTime: 'December 2018',
 		endTime: 'November 2020',
-		image: 'logo_xapiens',
+		image: 'logo_xapiens.png',
 		link: '',
 		firstColor: '#F4E984',
 		secondColor: '#C24D3D',
@@ -460,7 +378,7 @@ export const experience = [
 		status: 'Full-time',
 		startTime: 'August 2016',
 		endTime: 'May 2018',
-		image: 'logo_ugm',
+		image: 'logo_ugm.png',
 		link: '#7BD86C',
 		firstColor: '#E37575',
 		secondColor: '#AC46C6',
@@ -474,7 +392,7 @@ export const experience = [
 		status: '',
 		startTime: 'December 2017',
 		endTime: 'February 2018',
-		image: 'logo_pln',
+		image: 'logo_pln.png',
 		link: '#AC46C6',
 		firstColor: '#75DDE3',
 		secondColor: '#824A9C',
@@ -488,7 +406,7 @@ export const education = [
 		university: '***** ******* *********',
 		faculty: 'Postgraduate really soon',
 		major: 'Wish me the best!',
-		image: 'memoji_explode',
+		image: 'memoji_explode.png',
 		link: null,
 		firstColor: '#60CECE',
 		secondColor: '#329B3D',
@@ -498,7 +416,7 @@ export const education = [
 		university: 'Universitas Indonesia',
 		faculty: 'Faculty of Computer Science',
 		major: 'Information System',
-		image: 'logo_ui',
+		image: 'logo_ui.png',
 		link: 'https://www.ui.ac.id/',
 		firstColor: '#E37575',
 		secondColor: '#AC46C6'
@@ -508,9 +426,42 @@ export const education = [
 		university: 'Universitas Gadjah Mada',
 		faculty: 'Vocational School',
 		major: 'Electrical Engineering',
-		image: 'logo_ugm',
+		image: 'logo_ugm.png',
 		link: 'https://ugm.ac.id/',
 		firstColor: '#F4E984',
 		secondColor: '#C24D3D'
+	},
+]
+
+export const hyperlink = [
+	{
+		img: 'person',
+		label: 'About',
+		goto: 'about'
+	},
+	{
+		img: 'projects',
+		label: 'Projects',
+		goto: 'projects'
+	},
+	{
+		img: 'email',
+		label: 'Email',
+		goto: 'https://mail.google.com/mail/u/0/?fs=1&to=mrizafauzi.r@gmail.com&tf=cm'
+	},
+	{
+		img: 'linkedin',
+		label: 'Linkedin',
+		goto: 'https://www.linkedin.com/in/rizafra'
+	},
+	{
+		img: 'github',
+		label: 'Github',
+		goto: 'https://github.com/rizafauzi'
+	},
+	{
+		img: 'dribbble',
+		label: 'Dribbble',
+		goto: 'https://dribbble.com/rizafra11'
 	},
 ]

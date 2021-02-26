@@ -31,25 +31,35 @@
 							<h3>{{ data.role }}</h3>
 							<h3 class="title">Tech Used</h3>
 							<div class="spacer" />
+							<div class="scroll-wrapper">
+								<vue-horizontal-list :items="data.techUsed" 
+								:options="techUsedOptions">
+									<template v-slot:default="{item}">
+										<TechUsedCard :data="item" />
+									</template>
+								</vue-horizontal-list>
+							</div>
 							<h3>{{ state.website }}</h3>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="wrapper">
-				<h2>Activities</h2>
-				<div class="spacer" />
-			</div>
 		</div>
+		<Footer />
 	</section>
 </template>
 
 <script>
+import _ from 'lodash'
+import Footer from '../../components/Footer.vue'
+import VueHorizontalList from "vue-horizontal-list";
 import TechUsedCard from '../../components/TechUsedCard.vue'
-import { projects, experience } from '../../CONST'
+import { projects, experience, skills } from '../../CONST'
 export default {
 	components: {
-		TechUsedCard
+		Footer,
+		TechUsedCard,
+		VueHorizontalList
 	},
 	methods: {
 		navigate(url) {
@@ -71,7 +81,19 @@ export default {
 				firstColor: '',
 				secondColor: '',
 			},
-			project: []
+			project: [],
+			techUsedOptions: {
+				list: {
+					padding: 24
+				},
+				responsive: [
+					{ end: 576, size: 2 },
+					{ start: 576, end: 768, size: 3 },
+					{ start: 768, end: 992, size: 4 },
+					{ start: 992, end: 1200, size: 5 },
+					{ start: 1200, size: 5 },
+				]
+			}
 		}
 	},
 	mounted() {
@@ -80,11 +102,19 @@ export default {
 	},
 	created() {
 		const params = this.$route.params.slug
-
-		console.log('params: ', projects.filter(dt => dt.slug === params)) 
 		if (params) {
 			this.state = experience.find(dt => dt.slug === params)
-			this.project = projects.filter(dt => this.state.projects.includes(dt.slug))
+			const techs = _.flatMapDeep(skills.map(dt => dt.value))
+
+			let tempProject = projects.filter(dt => this.state.projects.includes(dt.slug))
+			for(let i = 0; i < tempProject.length; i++) {
+				tempProject[i] = {
+					...tempProject[i],
+					techUsed: techs.filter(dt => tempProject[i].techUsed.includes(dt.slug))
+				}
+			}
+
+			this.project = tempProject
 		}
 	}
 }
@@ -186,11 +216,12 @@ export default {
 			margin-left: 0px;
 		}
 		.timeline {
-			margin-top: 5vh;
 			width: 80%;
+			margin-top: 5vh;
 			margin-left: 10%;
 			.each-timeline {
 				display: flex;
+				margin-top: -3px;
 				.routes {
 					width: 24px;
 					display: flex;
@@ -224,6 +255,10 @@ export default {
 					width: 100%;
 					margin-left: 5%;
 					padding-bottom: 8vh;
+					.scroll-wrapper {
+						width: 90%;
+						margin-left: 5%;
+					}
 					h2 {
 						text-align: start;
 					}

@@ -41,7 +41,7 @@
 			<div class="wrapper">
 				<h2>Website</h2>
 				<div class="spacer" />
-				<div class="button" @click="navigate(state.website)">
+				<div v-if="state.website" class="button" @click="navigate(state.website)">
 					<h3> {{ state.website.replace('https://', '') }} </h3>
 					<img 
 						class="arrow"
@@ -53,7 +53,7 @@
 				<h2>Tech Used</h2>
 				<div class="spacer" />
 				<div class="scroll-wrapper">
-					<vue-horizontal-list :items="state.techUsed" 
+					<vue-horizontal-list :items="techUsed" 
 					:options="techUsedOptions">
 						<template v-slot:default="{item}">
 							<TechUsedCard :data="item" />
@@ -80,9 +80,10 @@
 </template>
 
 <script>
-import TechUsedCard from '../../components/TechUsedCard.vue'
+import _ from 'lodash'
+import { projects, skills } from '../../CONST'
 import VueHorizontalList from "vue-horizontal-list";
-import { projects } from '../../CONST'
+import TechUsedCard from '../../components/TechUsedCard.vue'
 import { TweenMax } from 'gsap'
 export default {
 	transitions: {
@@ -135,6 +136,7 @@ export default {
 				},
 				techUsed: []
 			},
+			techUsed: [],
 			techUsedOptions: {
 				list: {
 					padding: 24
@@ -151,10 +153,10 @@ export default {
 	},
 	created() {
 		const params = this.$route.params.slug
-
-		console.log('params: ', projects.filter(dt => dt.slug === params)) 
 		if (params) {
 			this.state = projects.find(dt => dt.slug === params)
+			const techs = _.flatMapDeep(skills.map(dt => dt.value))
+			this.techUsed = techs.filter(dt => this.state.techUsed.includes(dt.slug))
 		}
 	}
 }

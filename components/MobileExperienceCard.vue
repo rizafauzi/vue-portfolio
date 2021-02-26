@@ -18,7 +18,7 @@
 		<div class="profile-card">
 			<img 
 				class="profile-image"
-				:src="require(`~/assets/logo/${data.image}.png`)" 
+				:src="require(`~/assets/logo/${data.image}`)" 
 			/>
 			<div class="profile-content">
 				<h1 class="spacer">{{data.title}}</h1>

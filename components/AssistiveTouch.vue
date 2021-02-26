@@ -3,7 +3,7 @@
 		<div v-if="showModal" @click="toggle()" class="backdrop" />
 		<div class="assistive-wrapper">
 			<div v-if="showModal" class="assistive-modal" v-bind:id="[showModal ? 'show' : 'hide']">
-				<div class="list" v-for="(data, index) in state" :key="index" >
+				<div @click="handleJump(data.goto)" class="list" v-for="(data, index) in state" :key="index" >
 					<img :src="require(`~/assets/icon/${data.img}.png`)" />
 					<h3>{{ data.label }}</h3>
 				</div>
@@ -18,47 +18,26 @@
 </template>
 
 <script>
+import { hyperlink } from '../CONST'
 export default {
+	props: {
+		jump: {
+			type: Function
+		}
+	},
 	methods: {
 		toggle() {
 			this.showModal = !this.showModal
+		},
+		handleJump(goto) {
+			this.toggle()
+			this.jump(goto)
 		}
 	},
 	data() {
 		return {
 			showModal: false,
-			state: [
-				{
-					img: 'person',
-					label: 'About',
-					goto: ''
-				},
-				{
-					img: 'projects',
-					label: 'Projects',
-					goto: ''
-				},
-				{
-					img: 'email',
-					label: 'Email',
-					goto: ''
-				},
-				{
-					img: 'linkedin',
-					label: 'Linkedin',
-					goto: ''
-				},
-				{
-					img: 'github',
-					label: 'Github',
-					goto: ''
-				},
-				{
-					img: 'dribbble',
-					label: 'Dribbble',
-					goto: ''
-				},
-			]
+			state: hyperlink
 		}
 	}
 }

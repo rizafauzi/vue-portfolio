@@ -1,6 +1,6 @@
 <template>
 	<div class="footer-wrapper">
-		<div class="to-top">
+		<div @click="jumpToStart()" class="to-top">
 			<img class="top-img" src="~/static/icon/arrow-line.png" />
 		</div>
 		<div class="closing">
@@ -12,7 +12,16 @@
 
 <script>
 export default {
-
+	methods: {
+		jumpToStart() {
+			if (process.browser) {
+				const element = document.getElementById('header')
+				if (element) {
+					element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+				}
+			}
+		}
+	}
 }
 
 	

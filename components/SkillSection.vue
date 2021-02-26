@@ -8,7 +8,7 @@
 					<div class="each-software" v-for="(item, index) in data.value" :key="`${item.label}_${index}`">
 						<div class="software-image">
 							<img
-								:src="require(`~/assets/logo/${item.img}.png`)"
+								:src="require(`~/assets/logo/${item.img}`)"
 							/>
 						</div>
 						<h3> {{ item.label }} </h3>
