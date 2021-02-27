@@ -13,6 +13,7 @@
 				<div class="spacer"></div>
 				<h2>{{ data.faculty }}</h2>
 				<h2>{{ data.major }}</h2>
+				<h2 v-if="data.gpa">{{ `GPA: ${data.gpa}` }}</h2>
 				<a target="_blank" v-if="data.link" class="button" :href="data.link">
 					<h3>Go to Website</h3>
 				</a>
@@ -233,9 +234,11 @@ h1 {
 }
 
 h2 {
+	color: white;
+	font-size: 18px;
 	text-align: left;
 	@media (max-width: 768px) {
-		font-size: 12px;
+		font-size: 10px;
 	}
 }
 

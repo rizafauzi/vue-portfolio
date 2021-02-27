@@ -9,9 +9,9 @@
 				/>
 				<div class="profile-content">
 					<img 
-							v-if="!isMobile"
+							v-if="!isMobile()"
 							class="emoji"
-							src="~/static/img/memoji_celebrate.png" 
+							src="~/static/img/memoji_mac.png" 
 						/>
 					<div class="title">
 						<h1>{{`First of all, Glad to meet you!`}}</h1>
@@ -25,25 +25,7 @@
 
 <script>
 export default {
-	mounted() {
-    this.animateOnScroll()
-  },
 	methods: {
-		animateOnScroll() {
-      this.$gsap.from('.wrapper-card', {
-        x: 500,
-				opacity: 0,
-				delay: 100,
-				duration: 1.5,
-				ease: 'Power1.easeInOut',
-        scrollTrigger: {
-          trigger: '.wrapper-card',
-					start: "top 100%",
-					end: "top 30%",
-					scrub: true
-        }
-      })
-    },
 		isMobile() {
       if (process.browser) {
 				if (window.innerWidth <= 768) {
@@ -63,6 +45,7 @@ export default {
 
 .wrapper-card {
 	width: 75%;
+	margin-bottom: 20vh;
 	margin-left: 12.5%;
 	min-height: 60vh;
 	padding: 20px;
@@ -102,8 +85,9 @@ export default {
 				align-items: flex-start;
 			}
 			.emoji {
-				width: 200px;
-				height: 200px;
+				width: 120px;
+				height: 120px;
+				margin-bottom: 20px;
 				object-fit: contain;
 			}
 		}

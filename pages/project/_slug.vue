@@ -39,9 +39,14 @@
 				<h3>{{ state.description }}</h3>
 			</div>
 			<div class="wrapper">
+				<h2>Role</h2>
+				<div class="spacer" />
+				<h3>{{ state.role }}</h3>
+			</div>
+			<div v-if="state.website" class="wrapper">
 				<h2>Website</h2>
 				<div class="spacer" />
-				<div v-if="state.website" class="button" @click="navigate(state.website)">
+				<div class="button" @click="navigate(state.website)">
 					<h3> {{ state.website.replace('https://', '') }} </h3>
 					<img 
 						class="arrow"
@@ -61,11 +66,6 @@
 					</vue-horizontal-list>
 				</div>
 			</div>
-			<div class="wrapper">
-				<h2>Role</h2>
-				<div class="spacer" />
-				<h3>{{ state.role }}</h3>
-			</div>
 			<!--<div class="wrapper padding">
 				<h2>Other Projects</h2>
 				<div class="spacer" />
@@ -76,6 +76,7 @@
 				</div>
 			</div> -->
 		</section>
+		<Footer />
 	</div>
 </template>
 
@@ -84,6 +85,7 @@ import _ from 'lodash'
 import { projects, skills } from '../../CONST'
 import VueHorizontalList from "vue-horizontal-list";
 import TechUsedCard from '../../components/TechUsedCard.vue'
+import Footer from '../../components/Footer.vue'
 import { TweenMax } from 'gsap'
 export default {
 	transitions: {
@@ -104,6 +106,7 @@ export default {
     }
 	},
 	components: {
+		Footer,
 		TechUsedCard,
 		VueHorizontalList
 	},
@@ -272,7 +275,7 @@ export default {
 	width: 70%;
 	margin-left: 15%;
 	display: flex;
-	margin-top: 50px;
+	margin-bottom: 75px;
 	flex-direction: column;
 	align-items: flex-start;
 	overflow: hidden;
@@ -302,10 +305,6 @@ export default {
 			margin-left: 20px;
 		}
 	}
-}
-
-.button:hover {
-	transform: scale(1.1);
 }
 
 .padding {

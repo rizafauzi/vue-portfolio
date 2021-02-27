@@ -7,7 +7,7 @@
 		<div class="backdrop" />
 		<div class="container">
 			<div class="header">
-				<div class="title">
+				<div class="title-header">
 					<h1>{{ state.title }}</h1>
 					<h3>{{ state.startTime }} - {{ state.endTime }} </h3>
 				</div>
@@ -25,15 +25,17 @@
 								<img class="calendar" src="~/static/icon/calendar.png" />
 								<h3>{{ data.year }}</h3>
 							</div>
-							<h3>{{ data.summary }}</h3>
+							<h3>{{ data.description }}</h3>
 							<h3 class="title">Role</h3>
 							<div class="spacer" />
 							<h3>{{ data.role }}</h3>
 							<h3 class="title">Tech Used</h3>
 							<div class="spacer" />
 							<div class="scroll-wrapper">
-								<vue-horizontal-list :items="data.techUsed" 
-								:options="techUsedOptions">
+								<vue-horizontal-list 
+									:items="data.techUsed" 
+									:options="techUsedOptions"
+								>
 									<template v-slot:default="{item}">
 										<TechUsedCard :data="item" />
 									</template>
@@ -89,16 +91,12 @@ export default {
 				responsive: [
 					{ end: 576, size: 2 },
 					{ start: 576, end: 768, size: 3 },
-					{ start: 768, end: 992, size: 4 },
-					{ start: 992, end: 1200, size: 5 },
+					{ start: 768, end: 992, size: 3 },
+					{ start: 992, end: 1200, size: 4 },
 					{ start: 1200, size: 5 },
 				]
 			}
 		}
-	},
-	mounted() {
-		console.log('ASD: ', this.state)
-		console.log('Projects: ', this.project)
 	},
 	created() {
 		const params = this.$route.params.slug
@@ -156,10 +154,21 @@ export default {
 	position: relative;
 	align-items: center;
 	flex-direction: column;
+	.title-header {
+		width: 100%;
+		display: flex;
+		margin-top: 20px;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		@media (max-width: 768px) {
+			align-items: center;
+		}
+	}
 	.title {
 		width: 100%;
 		display: flex;
-		margin-top: 30px;
+		margin-top: 40px;
 		flex-direction: column;
 		align-items: flex-start;
 	}
@@ -232,11 +241,11 @@ export default {
 						width: 20px;
 						height: 20px;
 						border-radius: 50px;
-						border: solid 4px aqua;
+						border: solid 4px #FFBBAB;
 						@media (max-width: 768px) {
 							width: 15px;
 							height: 15px;
-							border: solid 2px aqua;
+							border: solid 2px #FFBBAB;
 						}
 					}
 					.line {
@@ -244,7 +253,7 @@ export default {
 						height: 100%;
 						margin-top: -3px;
 						border-radius: 4px;
-						background: aqua;
+						background: #FFBBAB;
 						@media (max-width: 768px) {
 							margin-top: -1px;
 							width: 2px;
@@ -335,6 +344,7 @@ export default {
 }
 
 h1 {
+	font-size: 48px;
 	@media (max-width: 768px) {
 		font-size: 28px;
 	}

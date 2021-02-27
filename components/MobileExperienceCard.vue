@@ -23,7 +23,7 @@
 			<div class="profile-content">
 				<h1 class="spacer">{{data.title}}</h1>
 				<h2>{{data.role}}</h2>
-				<div class="buttons">
+				<div v-if="data.projects.length > 0" class="buttons">
 					<h3>See Detail</h3>
 				</div>
 			</div>
@@ -91,6 +91,7 @@ export default {
 		transition: all 0.4s ease;
 		.profile-content {
 			padding: 4%;
+			width: 60%;
 			display: flex;
 			margin-top: 2%;
 			flex-direction: column;

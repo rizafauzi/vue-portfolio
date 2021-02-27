@@ -36,7 +36,7 @@
 			<EducationSection :data="educations"/>
 		</section>
 		<section>
-			<Footer/>
+			<Footer :isHome="true"/>
 		</section>
 	</section>
 </template>

@@ -88,7 +88,7 @@ export default {
 						border-radius: 10px;
 						justify-content: center;
 						border: solid 1px #999;
-						box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+						box-shadow: 10px 15px 25px rgba(0, 0, 0, 0.4);
 						@media (max-width: 768px) {
 							width: 65px;
 							height: 65px;

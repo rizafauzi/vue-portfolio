@@ -168,10 +168,13 @@ export default {
 
 h1 {
 	color: white;
-	font-size: 28px;
+	font-size: 24px;
 	line-height: 100%;
 	text-align: center;
 	margin-bottom: -5px;
+	@media (max-width: 768px) {
+		font-size: 18px;
+	}
 }
 
 h3 {

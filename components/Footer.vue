@@ -1,7 +1,10 @@
 <template>
 	<div class="footer-wrapper">
-		<div @click="jumpToStart()" class="to-top">
+		<div v-if="isHome" @click="jumpToStart()" class="to-top">
 			<img class="top-img" src="~/static/icon/arrow-line.png" />
+		</div>
+		<div v-else @click="jumpBack()" class="to-back">
+			<h3>Back</h3>
 		</div>
 		<div class="closing">
 			<h3>Designed and Developed by Riza Fauzi</h3>
@@ -12,7 +15,20 @@
 
 <script>
 export default {
+	props: {
+		isHome: {
+			type: Boolean,
+			default() {
+				return false
+			}
+		}
+	},
 	methods: {
+		jumpBack() {
+			if (process.browser) {
+				window.history.back();
+			}
+		},
 		jumpToStart() {
 			if (process.browser) {
 				const element = document.getElementById('header')
@@ -40,8 +56,8 @@ export default {
 		display: flex;
 		position: absolute;
 		align-items: center;
-		justify-content: center;
 		border-radius: 100px;
+		justify-content: center;
 		right: calc(50% - 25px);
 		backdrop-filter: blur(20px);
 		background: rgba(255, 255, 255, 0.3);
@@ -52,6 +68,19 @@ export default {
 			object-fit: contain;
 			transform: rotate(-90deg);
 		}
+	}
+	.to-back {
+		top: -25px;
+		display: flex;
+		padding: 10px 30px;
+		position: absolute;
+		align-items: center;
+		border-radius: 100px;
+		justify-content: center;
+		right: calc(50% - 30px);
+		backdrop-filter: blur(20px);
+		background: rgba(255, 255, 255, 0.3);
+		border: solid 1px rgba(255, 255, 255, 0.8);
 	}
 	.closing {
 		width: 100%;
@@ -72,6 +101,10 @@ h3 {
 }
 
 .to-top:hover {
+	cursor: pointer;
+}
+
+.to-back:hover {
 	cursor: pointer;
 }
 

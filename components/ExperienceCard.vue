@@ -23,7 +23,7 @@
 			<div class="profile-content">
 				<h1 class="spacer">{{data.title}}</h1>
 				<h3>{{data.role}}</h3>
-				<div class="button" @click="navigate(data.slug)">
+				<div v-if="data.projects.length > 0" class="button" @click="navigate(data.slug)">
 					<h3>See Detail</h3>
 				</div>
 			</div>

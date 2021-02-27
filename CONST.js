@@ -2,7 +2,20 @@
 
 export const projects = [
 	{
-		id: 0,
+		title: 'Backoffice UI',
+		slug: 'backoffice-bibit',
+		year: 'November 2020 - Present',
+		description: 'Bibit is a mutual fund application to help beginner investors to start investing. Anyone can directly invest optimally according to the level of risk. No experience needed and without confusion.',
+		summary: 'Bibit is a mutual fund application to help beginner investors to start investing.',
+		navigation: '#',
+		firstColor: '#7ED19A',
+		secondColor: '#5198B7',
+		website: null,
+		role: 'Frontend Developer',
+		image: 'bibit',
+		techUsed: ['react-js']
+	},
+	{
 		title: 'Virtual Playfest',
 		slug: 'virtual-playfest',
 		year: 'September - December 2020',
@@ -17,22 +30,20 @@ export const projects = [
 		techUsed: ['vue-js', 'nuxt-js']
 	},
 	{
-		id: 1,
 		title: 'Playfest',
 		slug: 'playfest',
 		year: 'Sep - Dec 2020',
-		description: 'I’m experienced in designing and developing in Web and Mobile Apps with a passion for the Love of bringing delightful and human-centric experience to Life.',
-		summary: 'I’m experienced in designing and developing in Web and Mobile Apps with a passion for the Love of bringing delightful and human-centric experience to Life.',
+		description: 'Playfest 2020 is an annual festival held by Narasi. Playfest 2020 was held online because of COVID-19. Narasi that we usually know Narasi TV is a digital-based media as a place and space for opinions, enriches perspectives and encourages creating like we are good friends, you know.',
+		summary: 'Playfest 2020 is an annual festival held by Narasi.tv. Playfest 2020 was held online because of COVID-19.',
 		navigation: '#',
 		firstColor: '#FF9CE9',
 		secondColor: '#8E64C4',
 		role: 'Frontend Developer',
-		website: 'https://virtualplayfest.narasi.tv',
+		website: 'https://playfest.narasi.tv',
 		image: 'playfest',
 		techUsed: ['vue-js', 'nuxt-js']
 	},
 	{
-		id: 2,
 		title: 'Indonesia Butuh Anak Muda',
 		slug: 'ibam',
 		year: 'Dec 2020 - Present',
@@ -42,32 +53,30 @@ export const projects = [
 		firstColor: '#7ED19A',
 		secondColor: '#5198B7',
 		role: 'Frontend Developer',
-		website: 'https://virtualplayfest.narasi.tv',
+		website: 'https://indonesiabutuhanakmuda.narasi.tv/',
 		image: 'ibam',
 		techUsed: ['vue-js', 'nuxt-js']
 	},
 	{
-		id: 3,
 		title: 'Narasi.tv',
 		slug: 'narasitv',
 		year: 'Dec 2020 - Present',
-		description: 'I’m experienced in designing and developing in Web and Mobile Apps with a passion for the Love of bringing delightful and human-centric experience to Life.',
-		summary: 'I’m experienced in designing and developing in Web and Mobile Apps with a passion for the Love of bringing delightful and human-centric experience to Life.',
+		description: 'Narasi.tv is the official website of Narasi TV. Narasi TV itself is a startup that was founded by Najwa since the beginning of 2018. Narasi TV was created by Najwa from scratch. He and two other co-founders are determined to create a quality program that still attracts the attention of the audience.',
+		summary: 'Narasi.tv is the official website of Narasi TV. Narasi TV itself is a startup that was founded by Najwa since the beginning of 2018.',
 		navigation: '#',
 		firstColor: '#FF9CE9',
 		secondColor: '#8E64C4',
 		role: 'Frontend Developer',
-		website: 'https://virtualplayfest.narasi.tv',
+		website: 'https://narasi.tv',
 		image: 'narasi_tv',
 		techUsed: ['figma', 'xd', 'prisma']
 	},
 	{
-		id: 4,
 		title: 'Event Narasi.tv',
 		slug: 'event-narasi',
 		year: 'Dec 2020 - Present',
-		description: 'I’m experienced in designing and developing in Web and Mobile Apps with a passion for the Love of bringing delightful and human-centric experience to Life.',
-		summary: 'I’m experienced in designing and developing in Web and Mobile Apps with a passion for the Love of bringing delightful and human-centric experience to Life.',
+		description: 'Narasi.tv events is a website that contains all past and future Narasi.tv events & festivals.',
+		summary: 'Narasi.tv events is a website that contains all past and future Narasi.tv events & festivals.',
 		navigation: '#',
 		firstColor: '#FF9CE9',
 		secondColor: '#8E64C4',
@@ -77,7 +86,6 @@ export const projects = [
 		techUsed: ['vue-js', 'nuxt-js']
 	},
 	{
-		id: 5,
 		title: '1Medix App',
 		slug: 'onemedix',
 		year: 'Jun 2020 - Nov 2020',
@@ -87,43 +95,37 @@ export const projects = [
 		firstColor: '#FF9CE9',
 		secondColor: '#8E64C4',
 		role: 'Tech Leader',
-		website: 'https://virtualplayfest.narasi.tv',
 		image: 'pcmi',
 		techUsed: ['react-js', 'xd', 'node-js', 'postgresql', 'express-js']
 	},
 	{
-		id: 6,
 		title: 'Loudspeaker',
 		slug: 'loudspeaker',
 		year: 'Jun 2020 - Nov 2020',
-		description: 'I’m experienced in designing and developing in Web and Mobile Apps with a passion for the Love of bringing delightful and human-centric experience to Life.',
-		summary: 'I’m experienced in designing and developing in Web and Mobile Apps with a passion for the Love of bringing delightful and human-centric experience to Life.',
+		description: 'Loudspeaker is Learning Management System (LMS) for MBSS Tbk. Built with interactive article, video, quiz, and assessment. Ship Crew. It educates ship crew  Health, Safety and Environment (HSE) and fundamental knowledge about Shiping.',
+		summary: 'Loudspeaker is Learning Management System (LMS) for MBSS Tbk., built with interactive article, video, quiz, and assessment.',
 		navigation: '#',
 		firstColor: '#FF9CE9',
 		secondColor: '#8E64C4',
-		role: 'Tech Leader',
-		website: 'https://virtualplayfest.narasi.tv',
+		role: 'UI Designer, Mobile Dev, Web Dev',
+		website: 'https://play.google.com/store/apps/details?id=com.mbss_loudspeaker',
 		image: 'lms',
 		techUsed: ['xd', 'react-js']
 	},
 	{
-		id: 7,
 		title: 'Asset Resource Management System',
 		slug: 'arms',
 		year: 'Dec 2018 - Sept 2019',
-		description: 'I’m experienced in designing and developing in Web and Mobile Apps with a passion for the Love of bringing delightful and human-centric experience to Life.',
-		summary: 'I’m experienced in designing and developing in Web and Mobile Apps with a passion for the Love of bringing delightful and human-centric experience to Life.',
+		description: `ARMS is system that help Petrosea.Tbk to manage assets and resources for daily basis. ARMS is integrated with internal Petrosea SAP as master data. The apps are web based (for admin) and mobile based (for Crew) It contains schedule management, roster, real-time approval message, `,
+		summary: 'ARMS is system that help Petrosea.Tbk to manage assets and resources for daily basis.',
 		navigation: '#',
 		firstColor: '#FF9CE9',
 		secondColor: '#8E64C4',
 		role: 'Backend Engineer',
-		website: null,
 		image: 'arms',
 		techUsed: ['node-js', 'graphql', 'express-js', 'postgresql', 'prisma']
 	},
 ]
-
-// 'vue-js', 'nuxt-js', 'react-js', 'html', 'css', 'postgresql', 'mysql', 'swiftui'
 
 export const skills = [
 	{
@@ -340,7 +342,7 @@ export const experience = [
 		link: '',
 		firstColor: '#DC59DF',
 		secondColor: '#5236A1',
-		projects: []
+		projects: ['backoffice-bibit']
 	},
 	{
 		id: 2,
@@ -368,7 +370,7 @@ export const experience = [
 		link: '',
 		firstColor: '#F4E984',
 		secondColor: '#C24D3D',
-		projects: ['arms', 'lms', 'onemedix']
+		projects: ['arms', 'loudspeaker', 'onemedix']
 	},
 	{
 		id: 4,
@@ -407,6 +409,7 @@ export const education = [
 		faculty: 'Postgraduate really soon',
 		major: 'Wish me the best!',
 		image: 'memoji_explode.png',
+		gpa: null,
 		link: null,
 		firstColor: '#60CECE',
 		secondColor: '#329B3D',
@@ -417,6 +420,7 @@ export const education = [
 		faculty: 'Faculty of Computer Science',
 		major: 'Information System',
 		image: 'logo_ui.png',
+		gpa: '3.74',
 		link: 'https://www.ui.ac.id/',
 		firstColor: '#E37575',
 		secondColor: '#AC46C6'
@@ -427,6 +431,7 @@ export const education = [
 		faculty: 'Vocational School',
 		major: 'Electrical Engineering',
 		image: 'logo_ugm.png',
+		gpa: '3.64',
 		link: 'https://ugm.ac.id/',
 		firstColor: '#F4E984',
 		secondColor: '#C24D3D'
