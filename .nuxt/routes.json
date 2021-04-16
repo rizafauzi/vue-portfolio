@@ -3,28 +3,24 @@
     "name": "projects",
     "path": "/projects",
     "component": "/Users/macbook/Documents/WORK/PORTFOLIO/riza-portfolio/pages/projects.vue",
-    "chunkName": "pages/projects",
-    "_name": "_c0c1c1c8"
+    "chunkName": "pages/projects"
   },
   {
     "name": "experience-slug",
     "path": "/experience/:slug?",
     "component": "/Users/macbook/Documents/WORK/PORTFOLIO/riza-portfolio/pages/experience/_slug.vue",
-    "chunkName": "pages/experience/_slug",
-    "_name": "_036ed9c7"
+    "chunkName": "pages/experience/_slug"
   },
   {
     "name": "project-slug",
     "path": "/project/:slug?",
     "component": "/Users/macbook/Documents/WORK/PORTFOLIO/riza-portfolio/pages/project/_slug.vue",
-    "chunkName": "pages/project/_slug",
-    "_name": "_26a18a3c"
+    "chunkName": "pages/project/_slug"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/macbook/Documents/WORK/PORTFOLIO/riza-portfolio/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_45f1ada0"
+    "chunkName": "pages/index"
   }
 ]
