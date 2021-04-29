@@ -351,7 +351,7 @@ export const experience = [
 		role: 'Frontend Developer',
 		status: 'Contract',
 		startTime: 'September 2020',
-		endTime: 'Present',
+		endTime: 'November 2020',
 		image: 'logo_narasi.png',
 		link: '',
 		firstColor: '#60CECE',
