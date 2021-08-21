@@ -2,7 +2,7 @@
 	<section>
 		<img 
 			class="background"
-			:src="require(`~/assets/projects/virtual_playfest_desktop.jpg`)" 
+			:src="require(`~/assets/projects/${ state.background }.jpg`)" 
 		/>
 		<div class="backdrop" />
 		<div class="container">
@@ -31,16 +31,15 @@
 							<h3>{{ data.role }}</h3>
 							<h3 class="title">Tech Used</h3>
 							<div class="spacer" />
-							<div class="scroll-wrapper">
-								<vue-horizontal-list 
-									:items="data.techUsed" 
-									:options="techUsedOptions"
-								>
-									<template v-slot:default="{item}">
-										<TechUsedCard :data="item" />
-									</template>
-								</vue-horizontal-list>
-							</div>
+								<div class="scroll-wrapper mt-6">
+									<div 
+										:key="index"
+										class="scroll" 
+										v-for="(state, index) in data.techUsed" 
+									>
+										<TechUsedCard :data="state" />
+									</div>
+								</div>
 							<h3>{{ state.website }}</h3>
 						</div>
 					</div>
@@ -54,14 +53,12 @@
 <script>
 import _ from 'lodash'
 import Footer from '../../components/Footer.vue'
-import VueHorizontalList from "vue-horizontal-list";
 import TechUsedCard from '../../components/TechUsedCard.vue'
 import { projects, experience, skills } from '../../CONST'
 export default {
 	components: {
 		Footer,
-		TechUsedCard,
-		VueHorizontalList
+		TechUsedCard
 	},
 	methods: {
 		navigate(url) {

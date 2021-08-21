@@ -35,7 +35,7 @@ export default {
 				{
 					img: 'dribbble',
 					label: 'Dribbble',
-					goto: 'https://dribbble.com/rizafra11'
+					goto: 'https://dribbble.com/rizafra'
 				},
 			]
 		}

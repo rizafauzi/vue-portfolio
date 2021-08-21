@@ -58,12 +58,13 @@
 				<h2>Tech Used</h2>
 				<div class="spacer" />
 				<div class="scroll-wrapper">
-					<vue-horizontal-list :items="techUsed" 
-					:options="techUsedOptions">
-						<template v-slot:default="{item}">
-							<TechUsedCard :data="item" />
-						</template>
-					</vue-horizontal-list>
+					<div 
+						:key="index"
+						class="scroll" 
+						v-for="(state, index) in techUsed" 
+					>
+						<TechUsedCard :data="state" />
+					</div>
 				</div>
 			</div>
 			<!--<div class="wrapper padding">
@@ -83,7 +84,6 @@
 <script>
 import _ from 'lodash'
 import { projects, skills } from '../../CONST'
-import VueHorizontalList from "vue-horizontal-list";
 import TechUsedCard from '../../components/TechUsedCard.vue'
 import Footer from '../../components/Footer.vue'
 import { TweenMax } from 'gsap'
@@ -107,8 +107,7 @@ export default {
 	},
 	components: {
 		Footer,
-		TechUsedCard,
-		VueHorizontalList
+		TechUsedCard
 	},
 	methods: {
 		navigate(url) {
@@ -140,18 +139,6 @@ export default {
 				techUsed: []
 			},
 			techUsed: [],
-			techUsedOptions: {
-				list: {
-					padding: 24
-				},
-				responsive: [
-					{ end: 576, size: 2 },
-					{ start: 576, end: 768, size: 3 },
-					{ start: 768, end: 992, size: 4 },
-					{ start: 992, end: 1200, size: 5 },
-					{ start: 1200, size: 5 },
-				]
-			},
 		}
 	},
 	created() {
@@ -284,10 +271,6 @@ export default {
 		width: 100%;
 		margin: 10px 0px;
 		background: rgba(255, 255, 255, 0.4);
-	}
-	.scroll-wrapper {
-		width: 90%;
-		margin-left: 5%;
 	}
 	.button {
 		padding: 2%;

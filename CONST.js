@@ -16,6 +16,20 @@ export const projects = [
 		techUsed: ['react-js']
 	},
 	{
+		title: 'House of Talent (HOT+)',
+		slug: 'hot-rcti',
+		year: 'May - July 2020',
+		description: 'Home of Talent (HOT) is a feature for digital talent shows and also social media for users. From the beginning of the competition, judging, to the end, everything is done digitally. In this feature, contestants just upload videos on the platform provided by RCTI+. Participants can follow, like, comment, and vote for each other.',
+		summary: 'Home of Talent (HOT) is a feature for digital talent shows and also social media for users.',
+		navigation: '#',
+		firstColor: '#7ED19A',
+		secondColor: '#5198B7',
+		website: 'https://hot.rctiplus.com',
+		role: 'Frontend Engineer',
+		image: 'rcti',
+		techUsed: ['react-js', 'next-js']
+	},
+	{
 		title: 'Virtual Playfest',
 		slug: 'virtual-playfest',
 		year: 'September - December 2020',
@@ -138,6 +152,14 @@ export const skills = [
 				url: 'https://reactjs.org',
 				firstColor: '#F0326E',
 				secondColor: '#802C6E'
+			},
+			{
+				img: 'logo_nextjs.png',
+				label: 'NextJS',
+				slug: 'next-js',
+				url: 'https://nextjs.org',
+				firstColor: '#CBF2D6',
+				secondColor: '#865AC4'
 			},
 			{
 				img: 'logo_vuejs.png',
@@ -334,15 +356,31 @@ export const experience = [
 		id: 1,
 		slug: 'bibit',
 		title: 'Bibit.id',
-		role: 'Frontend Engineer',
+		role: 'Lead Frontend Engineer',
 		status: 'Full-time',
 		startTime: 'November 2020',
 		endTime: 'Present',
 		image: 'logo_bibit.png',
 		link: '',
+		background: 'bibit_desktop',
 		firstColor: '#DC59DF',
 		secondColor: '#5236A1',
 		projects: ['backoffice-bibit']
+	},
+	{
+		id: 2,
+		slug: 'rcti',
+		title: 'RCTI+',
+		role: 'Frontend Engineer',
+		status: 'Contract',
+		startTime: 'May 2021',
+		endTime: 'July 2021',
+		image: 'logo_rcti.png',
+		background: 'rcti_desktop',
+		link: '',
+		firstColor: '#FCFF36',
+		secondColor: '#E63E7B',
+		projects: ['hot-rcti']
 	},
 	{
 		id: 2,
@@ -350,9 +388,10 @@ export const experience = [
 		title: 'Narasi.tv',
 		role: 'Frontend Developer',
 		status: 'Contract',
-		startTime: 'September 2020',
+		startTime: 'May 2021',
 		endTime: 'November 2020',
 		image: 'logo_narasi.png',
+		background: 'virtual_playfest_desktop',
 		link: '',
 		firstColor: '#60CECE',
 		secondColor: '#329B3D',
@@ -367,8 +406,9 @@ export const experience = [
 		startTime: 'December 2018',
 		endTime: 'November 2020',
 		image: 'logo_xapiens.png',
+		background: 'lms_desktop',
 		link: '',
-		firstColor: '#F4E984',
+		firstColor: '#FFB8FB',
 		secondColor: '#C24D3D',
 		projects: ['arms', 'loudspeaker', 'onemedix']
 	},
@@ -381,6 +421,7 @@ export const experience = [
 		startTime: 'August 2016',
 		endTime: 'May 2018',
 		image: 'logo_ugm.png',
+		background: 'bibit_desktop',
 		link: '#7BD86C',
 		firstColor: '#E37575',
 		secondColor: '#AC46C6',
@@ -395,6 +436,7 @@ export const experience = [
 		startTime: 'December 2017',
 		endTime: 'February 2018',
 		image: 'logo_pln.png',
+		background: 'bibit_desktop',
 		link: '#AC46C6',
 		firstColor: '#75DDE3',
 		secondColor: '#824A9C',
@@ -467,6 +509,6 @@ export const hyperlink = [
 	{
 		img: 'dribbble',
 		label: 'Dribbble',
-		goto: 'https://dribbble.com/rizafra11'
+		goto: 'https://dribbble.com/rizafra'
 	},
 ]

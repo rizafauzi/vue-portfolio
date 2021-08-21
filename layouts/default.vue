@@ -38,7 +38,7 @@ export default {
 
 </script>
 
-<style>
+<style lang="scss">
 
 html {
 	overflow: auto;
@@ -112,5 +112,31 @@ h3 {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+
+.scroll-wrapper {
+	width: 100%;
+	white-space:nowrap;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+	.scroll {
+		width: 15em;
+		height: 30em;
+		overflow: hidden;
+		margin-right: 2em;
+		border-radius: 3px;
+		overflow-y: hidden;
+		position: relative;
+		display:inline-block;
+		@media (max-width: 768px) {
+			width: 10em;
+		}
+	}
+}
+
+.scroll-wrapper::-webkit-scrollbar {
+	display: none;
 }
 </style>

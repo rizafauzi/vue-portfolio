@@ -46,18 +46,13 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper-card {
-	height: 45vh;
+	height: 10em;
 	width: 230px;
 	display: flex;
-	margin-right: 20px;
 	position: relative;
-	@media (max-width: 1440px) {
-		width: 180px;
-		height: 45vh;
-	}
 	@media (max-width: 768px) {
 		width: 150px;
-		height: 40vh;
+		height: 10em;
 	}
 	.time-wrapper {
 		height: auto;
